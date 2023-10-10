@@ -6,13 +6,19 @@ def find_roots_of_quadratic_equation() -> None:
     a = int(input("a = "))
     b = int(input("b = "))
     c = int(input("c = "))
-    delta = b * b - 4 * a * c
-    if delta < 0:
-        print("Brak pierwiastków.")
-    elif delta == 0:
-        print(f"x0 = {-b / (2 * a)}")
+    if a == 0:
+        print("To nie jest równanie kwadratowe!")
     else:
-        print(f"x1 = {(-b - math.sqrt(delta)) / 2 * a}\nx2 = {(-b + math.sqrt(delta)) / 2 * a}")
+        delta = b * b - 4 * a * c
+        if delta < 0:
+            print("Brak pierwiastków rzeczywistych.")
+        elif delta == 0:
+            x0 = -b / (2 * a)
+            print(f"x0 = {x0}")
+        else:
+            x1 = (-b - math.sqrt(delta)) / (2 * a)
+            x2 = (-b + math.sqrt(delta)) / (2 * a)
+            print(f"x1 = {x1}\nx2 = {x2}")
 
 
 if __name__ == '__main__':
