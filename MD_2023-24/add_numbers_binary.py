@@ -50,7 +50,7 @@ def add_bin_numbers(bin_number_1: str, bin_number_2: str) -> str:
         else:
             bin_sum += "1"
             next_digit = "1"
-    return bin_sum
+    return reverse_bin_number(bin_sum)
 
 
 def main() -> None:
@@ -64,7 +64,7 @@ def main() -> None:
     bin_number_2 = fill_bin_number_with_0(bin_number_2)
     print(f"\nPodane liczby w systemie binarnym:\n\t{bin_number_1}\n\t{bin_number_2}")
 
-    bin_sum = reverse_bin_number(add_bin_numbers(bin_number_1, bin_number_2))
+    bin_sum = add_bin_numbers(bin_number_1, bin_number_2)
     dec_sum = convert_bin_to_dec(bin_sum)
     print(f"\nSuma podanych liczb:\n\t{bin_sum}(2) = {dec_sum}(10)")
 
