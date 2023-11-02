@@ -6,6 +6,7 @@ def find_roots_of_quadratic_equation() -> None:
     a = int(input("a = "))
     b = int(input("b = "))
     c = int(input("c = "))
+
     if a == 0:
         print("To nie jest równanie kwadratowe!")
     else:

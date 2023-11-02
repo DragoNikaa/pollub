@@ -7,7 +7,7 @@ def input_positive_number() -> int:
 
 def find_max() -> None:
     numbers = [input_positive_number() for _ in range(3)]
-    max_number = numbers[0]
+    max_number = 0
     for number in numbers:
         if number > max_number:
             max_number = number
