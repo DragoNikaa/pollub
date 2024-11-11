@@ -1,0 +1,18 @@
+program negacja;
+
+	#include("stdlib.hhf");
+	
+	static
+		liczba: int8;
+	
+begin negacja;
+
+	stdout.put("Podaj liczbe z zakresu od -127 do 127: ");
+	stdin.get(liczba);
+	
+	mov(0, AL);
+	sub(liczba, AL);
+	mov(AL, liczba);
+	stdout.put("Wprowadzona liczba po zmianie znaku: ", liczba, nl);
+
+end negacja;

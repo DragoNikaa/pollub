@@ -1,0 +1,16 @@
+program deklaracje_liczb;
+
+	#include("stdlib.hhf");
+
+	static
+		liczba_1: int8 := 64;
+		liczba_2: int32;
+
+begin deklaracje_liczb;
+
+	stdout.put("Podaj liczbe: ");
+	stdin.get(liczba_2);
+	stdout.put("Liczba z wartoscia poczatkowa: ", liczba_1, nl,
+			   "Liczba wprowadzona z klawiatury: ", liczba_2, nl);
+	
+end deklaracje_liczb;

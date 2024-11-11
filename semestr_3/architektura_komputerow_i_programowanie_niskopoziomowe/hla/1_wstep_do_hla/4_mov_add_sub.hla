@@ -1,0 +1,20 @@
+program mov_add_sub;
+
+	#include("stdlib.hhf");
+	
+	static
+		a: int8 := -7;
+		b: int8 := 6;
+	
+begin mov_add_sub;
+
+	stdout.put( "a = ", a, nl, "b = ", b, nl);
+	
+	mov(b, AL);
+	sub(AL, a);
+	stdout.put("a - b = ", a, nl);
+	
+	add(12, a);
+	stdout.put("(a - b) + 12 = ", a, nl);
+
+end mov_add_sub;

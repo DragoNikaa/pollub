@@ -1,0 +1,16 @@
+program deklaracje_zmiennych_logicznych;
+
+	#include("stdlib.hhf");
+
+	static
+		zmienna_logiczna: boolean;
+		falsz: boolean := false;
+		prawda: boolean := true;
+
+begin deklaracje_zmiennych_logicznych;
+
+	stdout.put("Zmienna logiczna bez wartosci poczatkowej: ", zmienna_logiczna, nl,
+			   "Falsz logiczny: ", falsz, nl,
+			   "Prawda logiczna: ", prawda, nl);
+	
+end deklaracje_zmiennych_logicznych;

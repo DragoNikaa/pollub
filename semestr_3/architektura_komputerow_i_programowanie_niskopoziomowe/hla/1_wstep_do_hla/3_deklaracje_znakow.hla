@@ -1,0 +1,16 @@
+program deklaracje_znakow;
+
+	#include("stdlib.hhf");
+
+	static
+		znak_1: char := 'A';
+		znak_2: char;
+
+begin deklaracje_znakow;
+
+	stdout.put("Zmienna znakowa z wartoscia poczatkowa: ", znak_1, nl);
+	stdout.put("Podaj znak: ");
+	stdin.get(znak_2);
+	stdout.put("Znak wprowadzony z klawiatury: ", znak_2, nl);
+	
+end deklaracje_znakow;
