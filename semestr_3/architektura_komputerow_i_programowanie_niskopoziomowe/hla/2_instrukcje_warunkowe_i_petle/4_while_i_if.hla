@@ -1,0 +1,23 @@
+program while_i_if;
+
+	#include("stdlib.hhf");
+	
+	static
+		i: int8 := 40;
+	
+begin while_i_if;
+
+	mov(0, CL);
+
+	while (i > 0) do
+		stdout.put(i:5);
+		dec(i);
+		inc(CL);
+		
+		if (CL == 5) then
+			stdout.newln();
+			mov(0, CL);
+		endif;
+	endwhile;
+
+end while_i_if;

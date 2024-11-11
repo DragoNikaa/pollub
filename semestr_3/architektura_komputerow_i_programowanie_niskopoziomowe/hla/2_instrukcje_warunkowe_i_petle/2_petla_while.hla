@@ -1,0 +1,17 @@
+program petla_while;
+
+	#include("stdlib.hhf");
+	
+	static
+		i: int8 := 10;
+	
+begin petla_while;
+	
+	while (i > 0) do
+		stdout.put(i:5);
+		dec(i);
+	endwhile;
+		
+	stdout.newln();
+
+end petla_while;

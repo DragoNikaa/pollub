@@ -1,0 +1,27 @@
+program znaki_liczb;
+
+	#include("stdlib.hhf");
+	
+	static
+		liczba: int32;
+	
+begin znaki_liczb;
+
+	for(mov(0, CL); CL < 5; inc(CL)) do
+		stdout.put("Podaj liczbe: ");
+		stdin.get(liczba);
+		
+		if (liczba > 0) then
+			stdout.put("Wprowadzona liczba jest dodatnia.");
+		else
+			if (liczba < 0) then
+				stdout.put("Wprowadzona liczba jest ujemna.");
+			else
+				stdout.put("Wprowadzona liczba jest zerem.");
+			endif;
+		endif;
+		
+		stdout.put(nl, nl);
+	endfor;
+
+end znaki_liczb;

@@ -1,0 +1,19 @@
+program while_i_for;
+
+	#include("stdlib.hhf");
+	
+	static
+		i: int8 := 40;
+	
+begin while_i_for;
+
+	while (i > 0) do
+		for(mov(0, CL); CL < 5; inc(CL)) do
+			stdout.put(i:5);
+			dec(i);
+		endfor;
+		
+		stdout.newln();
+	endwhile;
+
+end while_i_for;
