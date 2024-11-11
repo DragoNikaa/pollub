@@ -1,0 +1,33 @@
+program mov_add_sub;
+
+	#include("stdlib.hhf");
+	
+	static
+		a: int8 := -7;
+		b: int16 := -277;
+		c: int32 := -66000;
+		
+begin mov_add_sub;
+
+	stdout.put("Wartosci poczatkowe:", nl, "liczba jednobajtowa = ", a, nl,
+			   "slowo = ", b, nl, "dwuslowo = ", c, nl, nl);
+	
+	mov(0, AL);
+	sub(a, AL);
+	mov(AL, a);
+	
+	mov(0, AX);
+	sub(b, AX);
+	mov(AX, b);
+	
+	mov(0, EAX);
+	sub(c, EAX);
+	mov(EAX, c);
+	
+	stdout.put("Po zanegowaniu:", nl, "liczba jednobajtowa = ", a, nl,
+			   "slowo = ", b, nl, "dwuslowo = ", c, nl, nl);
+	
+	add(666, c);
+	stdout.put("zanegowane dwuslowo + 666 = ", c, nl);
+
+end mov_add_sub;

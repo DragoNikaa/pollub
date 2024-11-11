@@ -1,0 +1,19 @@
+program forever_i_breakif;
+
+	#include("stdlib.hhf");
+	
+	static
+		i: int8 := 15;
+	
+begin forever_i_breakif;
+
+	forever
+		stdout.put(i:5);
+		dec(i);
+		
+		breakif(i == 0);
+	endfor;
+	
+	stdout.newln();
+
+end forever_i_breakif;

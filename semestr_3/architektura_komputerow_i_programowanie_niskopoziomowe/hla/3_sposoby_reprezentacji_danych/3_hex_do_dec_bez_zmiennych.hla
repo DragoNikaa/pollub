@@ -1,0 +1,14 @@
+program hex_do_dex_bez_zmiennych;
+
+	#include("stdlib.hhf");
+	
+begin hex_do_dex_bez_zmiennych;
+
+	stdout.put("Podaj liczbe w zapisie szesnastkowym: ");
+	stdin.get(eax);
+	
+	stdout.put("Wartosc ", eax, "H w zapisie dziesietnym: ");
+	stdout.puti32(eax);
+	stdout.newln();
+
+end hex_do_dex_bez_zmiennych;

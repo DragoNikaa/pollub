@@ -1,0 +1,16 @@
+program instrukcja_repeat;
+
+	#include("stdlib.hhf");
+	
+begin instrukcja_repeat;
+
+	mov(0, al);
+
+	repeat
+		stdout.put(al:5);
+		inc(al);
+	until(al == 10);
+	
+	stdout.newln();
+
+end instrukcja_repeat;

@@ -1,0 +1,24 @@
+program try_exception;
+
+	#include("stdlib.hhf");
+	
+	static
+		liczba: int8;
+	
+begin try_exception;
+
+	forever
+		try
+			stdout.put("Podaj liczbe z zakresu od -128 do 127: ");
+			stdin.get(liczba);
+			break;
+		exception (ex.ConversionError)
+			stdout.put("Niepoprawna wartosc, sprobuj jeszcze raz.", nl, nl);
+		exception (ex.ValueOutOfRange)
+			stdout.put("Wartosc spoza zakresu, sprobuj jeszcze raz.", nl, nl);
+		endtry;
+	endfor;
+	
+	stdout.put("Poprawna wartosc.", nl);
+	
+end try_exception;

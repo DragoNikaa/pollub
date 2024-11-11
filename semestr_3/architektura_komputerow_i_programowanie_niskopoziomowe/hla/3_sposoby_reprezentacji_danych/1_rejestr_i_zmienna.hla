@@ -1,0 +1,19 @@
+program rejestr_i_zmienna;
+
+	#include("stdlib.hhf");
+	
+	static
+		zmienna: int8;
+		
+begin rejestr_i_zmienna;
+
+	stdout.put("Wprowadz liczbe do rejestru AL: ");
+	stdin.get(al);
+	
+	stdout.put("Wprowadz liczbe do zmiennej int8: ");
+	stdin.get(zmienna);
+	
+	stdout.put(nl, "Wartosc wyswietlana z rejestru AL: ", al, nl,
+			   "Wartosc wyswietlana ze zmiennej int8: ", zmienna, nl);
+
+end rejestr_i_zmienna;
