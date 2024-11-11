@@ -1,0 +1,16 @@
+program hex_do_dec;
+
+	#include("stdlib.hhf");
+	
+	static
+		zmienna: int32;
+	
+begin hex_do_dec;
+
+	stdout.put("Podaj liczbe w zapisie szesnastkowym: ");
+	stdin.get(eax);
+	
+	mov(eax, zmienna);
+	stdout.put("Wartosc ", eax, "H w zapisie dziesietnym: ", zmienna, nl);
+
+end hex_do_dec;

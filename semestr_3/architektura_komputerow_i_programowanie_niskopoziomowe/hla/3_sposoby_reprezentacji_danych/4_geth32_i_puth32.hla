@@ -1,0 +1,18 @@
+program geth32_i_puth32;
+
+	#include("stdlib.hhf");
+	
+	static
+		zmienna: int32;
+	
+begin geth32_i_puth32;
+
+	stdout.put("Podaj liczbe w zapisie szesnastkowym: ");
+	stdin.geth32();
+	mov(eax, zmienna);
+	
+	stdout.put("Wprowadzona wartosc w zapisie szesnastkowym: ");
+	stdout.puth32(zmienna);
+	stdout.newln();
+
+end geth32_i_puth32;
