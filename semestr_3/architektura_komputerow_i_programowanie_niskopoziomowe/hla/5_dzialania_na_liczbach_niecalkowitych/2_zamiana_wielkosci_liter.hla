@@ -1,0 +1,19 @@
+program zamiana_wielkosci_liter;
+
+	#include("stdlib.hhf");
+	
+begin zamiana_wielkosci_liter;
+
+	stdout.put("Wprowadz wielka litere: ");
+	stdin.getc();
+	
+	if (al >= 65 && al <= 90) then
+		add(32, al);
+		stdout.put("Wprowadzona litera po konwersji do malej litery: ");
+		stdout.putc(al);
+		stdout.newln();
+	else
+		stdout.put("Wprowadzono nieprawidlowy znak.", nl);
+	endif;
+
+end zamiana_wielkosci_liter;
