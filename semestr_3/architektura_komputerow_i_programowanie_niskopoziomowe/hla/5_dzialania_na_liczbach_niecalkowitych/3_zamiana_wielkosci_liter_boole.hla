@@ -1,0 +1,19 @@
+program zamiana_wielkosci_liter_boole;
+
+	#include("stdlib.hhf");
+	
+begin zamiana_wielkosci_liter_boole;
+
+	stdout.put("Wprowadz litere: ");
+	stdin.getc();
+	
+	if ((al >= 65 && al <= 90) || (al >= 97 && al <= 122)) then
+		xor(#%00100000, al);
+		stdout.put("Wprowadzona litera po konwersji wielkosci: ");
+		stdout.putc(al);
+		stdout.newln();
+	else
+		stdout.put("Wprowadzono nieprawidlowy znak.", nl);
+	endif;
+
+end zamiana_wielkosci_liter_boole;

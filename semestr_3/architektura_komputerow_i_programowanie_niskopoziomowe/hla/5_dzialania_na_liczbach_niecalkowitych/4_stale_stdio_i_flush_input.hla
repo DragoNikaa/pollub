@@ -1,0 +1,18 @@
+program stale_stdio_i_flush_input;
+
+	#include("stdlib.hhf");
+	
+begin stale_stdio_i_flush_input;
+
+	stdout.put("Wprowadz:", nl,
+			   "- litere 'd', aby uslyszec dzwiek dzwonka", nl,
+			   "- inny znak, aby zakonczyc program", nl);
+	stdin.getc();
+	
+	while (al == 'd') do
+		stdout.put(stdio.bell);
+		stdin.flushInput();
+		stdin.getc();
+	endwhile;
+
+end stale_stdio_i_flush_input;

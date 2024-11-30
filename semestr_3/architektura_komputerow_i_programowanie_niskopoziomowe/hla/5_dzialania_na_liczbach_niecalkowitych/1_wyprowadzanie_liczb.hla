@@ -1,0 +1,33 @@
+program wyprowadzanie_liczb;
+
+	#include("stdlib.hhf");
+	
+	static
+		zmienna1: real32 := -4.87660e-2;
+		zmienna2: real32 := 562.3456e1;
+		zmienna3: real32 := 3.14e-15;
+	
+begin wyprowadzanie_liczb;
+
+	stdout.put("Zmienna 1:", nl, "Procedura stdout.putr32: ");
+	stdout.putr32(zmienna1, 15, 5, '@');
+	stdout.put(nl, "Procedura stdout.pute32: ");
+	stdout.pute32(zmienna1, 10);
+	stdout.put(nl, "Procedura stdout.put postac dziesietna: ", zmienna1:10:5);
+	stdout.put(nl, "Procedura stdout.put postac wykladnicza: ", zmienna1);
+	
+	stdout.put(nl, nl, "Zmienna 2:", nl, "Procedura stdout.putr32: ");
+	stdout.putr32(zmienna2, 15, 5, '$');
+	stdout.put(nl, "Procedura stdout.pute32: ");
+	stdout.pute32(zmienna2, 10);
+	stdout.put(nl, "Procedura stdout.put postac dziesietna: ", zmienna2:15:5);
+	stdout.put(nl, "Procedura stdout.put postac wykladnicza: ", zmienna2);
+	
+	stdout.put(nl, nl, "Zmienna 3:", nl, "Procedura stdout.putr32: ");
+	stdout.putr32(zmienna3, 25, 17, '^');
+	stdout.put(nl, "Procedura stdout.pute32: ");
+	stdout.pute32(zmienna3, 10);
+	stdout.put(nl, "Procedura stdout.put postac dziesietna: ", zmienna3:25:17);
+	stdout.put(nl, "Procedura stdout.put postac wykladnicza: ", zmienna3, nl);
+
+end wyprowadzanie_liczb;
