@@ -1,0 +1,35 @@
+program koercja_typow;
+
+	#include("stdlib.hhf");
+	
+	static
+		tab8: int8[10] := [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+		tab32: int32[10] := 10 dup [1];
+		tymczasowa8: int8;
+	
+begin koercja_typow;
+
+	stdout.put("Tablica elementow int8:", nl);
+	for (mov(0, ecx); ecx < 10; inc(ecx)) do
+		stdout.put(tab8[ecx]:-5);
+	endfor;
+	
+	stdout.put(nl, "Tablica elementow int32:", nl);
+	for (mov(0, ecx); ecx < 10; inc(ecx)) do
+		stdout.put(tab32[ecx * 4]:-5);
+	endfor;
+
+	stdout.put(nl, nl, "Podaj indeks elementu do skopiowania: ");
+	stdin.geti32();
+	
+	mov(tab8[eax], bl);
+	mov(bl, tymczasowa8);
+	mov((type int32 tymczasowa8), tab32[eax * 4]);
+	
+	stdout.put(nl, "Tablica elementow int32 po skopiowaniu elementu z tablicy int8:", nl);
+	for (mov(0, ecx); ecx < 10; inc(ecx)) do
+		stdout.put(tab32[ecx * 4]:-5);
+	endfor;
+	stdout.newln();
+
+end koercja_typow;

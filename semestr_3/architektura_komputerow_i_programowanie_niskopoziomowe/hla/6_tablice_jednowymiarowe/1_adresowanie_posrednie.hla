@@ -1,0 +1,18 @@
+program adresowanie_posrednie;
+
+	#include("stdlib.hhf");
+	
+	static
+		zmienna: int8;
+	
+begin adresowanie_posrednie;
+
+	mov(&zmienna, eax);
+	stdout.put("Adres zmiennej statycznej: ", eax, "H", nl);
+	
+	mov(16, ebx);
+	mov(ebx, [eax]);
+	stdout.put("Zmienna po zapisaniu wartosci z wykorzystaniem "
+			   "adresowania posredniego przez rejestr: ", zmienna, nl);
+
+end adresowanie_posrednie;

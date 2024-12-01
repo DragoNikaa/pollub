@@ -1,0 +1,14 @@
+program adresowanie_indeksowe;
+
+	#include("stdlib.hhf");
+	
+	static
+		tab8: int8[10] := [10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+	
+begin adresowanie_indeksowe;
+
+	stdout.put("Podaj indeks elementu tablicy (0-9): ");
+	stdin.geti32();
+	stdout.put("Element tablicy o podanym indeksie: ", tab8[eax], nl);
+
+end adresowanie_indeksowe;
