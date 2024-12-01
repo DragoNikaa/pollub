@@ -1,0 +1,28 @@
+program przesuniecie_bitowe;
+
+	#include("stdlib.hhf");
+	
+	static
+		liczba: int8;
+	
+begin przesuniecie_bitowe;
+
+	stdout.put("Podaj liczbe dodatnia: ");
+	stdin.geti8();
+	
+	mov(al, liczba);
+	shl(2, liczba);
+	stdout.put("Wynik przesuniecia bitowego w lewo o 2: ", liczba, nl);
+	
+	mov(al, liczba);
+	shr(2, liczba);
+	stdout.put("Wynik przesuniecia bitowego w prawo o 2: ", liczba, nl);
+	
+	stdout.put(nl, "Podaj liczbe ujemna: ");
+	stdin.geti8();
+	
+	mov(al, liczba);
+	sar(2, liczba);
+	stdout.put("Wynik przesuniecia arytmetycznego w prawo o 2: ", liczba, nl);
+
+end przesuniecie_bitowe;

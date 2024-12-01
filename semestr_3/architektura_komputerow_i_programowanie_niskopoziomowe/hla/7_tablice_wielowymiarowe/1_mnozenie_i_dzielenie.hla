@@ -1,0 +1,38 @@
+program mnozenie_i_dzielenie;
+
+	#include("stdlib.hhf");
+	
+begin mnozenie_i_dzielenie;
+
+	stdout.put("Podaj pierwszy czynnik: ");
+	stdin.geti8();
+	mov(al, bl);
+	stdout.put("Podaj drugi czynnik: ");
+	stdin.geti8();
+	
+	stdout.puti8(bl);
+	stdout.put(" * ");
+	stdout.puti8(al);
+	stdout.put(" = ");
+	imul(bl);
+	stdout.puti16(ax);
+	
+	stdout.put(nl, nl, "Podaj dzielna: ");
+	stdin.geti16();
+	mov(ax, cx);
+	stdout.put("Podaj dzielnik: ");
+	stdin.geti8();
+	mov(al, bl);
+	mov(cx, ax);
+	
+	stdout.puti16(ax);
+	stdout.put(" / ");
+	stdout.puti8(bl);
+	stdout.put(" = ");
+	idiv(bl);
+	stdout.puti8(al);
+	stdout.put(" r. ");
+	stdout.puti8(ah);
+	stdout.newln();
+
+end mnozenie_i_dzielenie;
