@@ -1,0 +1,27 @@
+program tablica_znakow;
+
+	#include("stdlib.hhf");
+	
+	static
+		tab: char[5, 4];
+		tymczasowa32: int32;
+	
+begin tablica_znakow;
+
+	for(mov(0, ecx); ecx < 5; inc(ecx)) do
+		for(mov(0, edx); edx < 4; inc(edx)) do
+			mov(ecx, eax);
+			intmul(4, eax);
+			add(edx, eax);
+			
+			mov(eax, tymczasowa32);
+			add(97, tymczasowa32);
+			mov((type int8 tymczasowa32), bl);
+			mov(bl, tab[eax]);
+			
+			stdout.put(tab[eax]:5);
+		endfor;
+		stdout.newln();
+	endfor;
+
+end tablica_znakow;
