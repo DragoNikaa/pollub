@@ -33,9 +33,9 @@ def main() -> None:
     print()
 
     funkcja = int(input("Wybierz funkcję aproksymującą:\n"
-                        "0 -> g(x) = a * x + b\n"
-                        "1 -> g(x) = a / x + b\n"
-                        "2 -> g(x) = b * a ^ x\n"))
+                        "0 - g(x) = a * x + b\n"
+                        "1 - g(x) = a / x + b\n"
+                        "2 - g(x) = b * a ^ x\n"))
 
     b, a = wyznacz_wspolczynniki_funkcji(wezly, x, y, funkcja)
     print(f"\nWspółczynniki funkcji, która najlepiej aproksymuje podane dane w sensie najmniejszych kwadratów:\n"
