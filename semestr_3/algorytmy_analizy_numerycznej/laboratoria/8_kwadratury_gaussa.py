@@ -10,11 +10,11 @@ def wyznacz_wartosc_calki_gauss(n: int, x: list[float], H: list[float], f: Calla
 
 
 def main() -> None:
-    nr_calki = int(input("Wybierz całkę:\n"
-                         "1 - ∫ x ^ 2 / sqrt(1 - x ^ 2) dx\tod -1 do 1,\tGauss-Chebyshev\tdla n = 3\n"
-                         "2 - ∫ 1 / sqrt(1 + x ^ 2) dx\t\tod -1 do 1,\tGauss-Legendre\tdla n = 4\n"
-                         "3 - ∫ e ^ (-2 * x) * sin(x) / x dx\tod 0 do ∞,\tGauss-Laguerre\tdla n = 3\n"
-                         "4 - ∫ e ^ (-x ^ 2) * cos(x) dx\t\tod -∞ do ∞,\tGauss-Hermite\tdla n = 4\n"))
+    nr_calki = int(input("Wybierz całkę i kwadraturę Gaussa:\n"
+                         "1 - ∫ x ^ 2 / sqrt(1 - x ^ 2) dx\tod -1 do 1\t->\tGauss-Chebyshev\tdla n = 3\n"
+                         "2 - ∫ 1 / sqrt(1 + x ^ 2) dx\t\tod -1 do 1\t->\tGauss-Legendre\tdla n = 4\n"
+                         "3 - ∫ e ^ (-2 * x) * sin(x) / x dx\tod 0 do ∞\t->\tGauss-Laguerre\tdla n = 3\n"
+                         "4 - ∫ e ^ (-x ^ 2) * cos(x) dx\t\tod -∞ do ∞\t->\tGauss-Hermite\tdla n = 4\n"))
     print()
 
     match nr_calki:
