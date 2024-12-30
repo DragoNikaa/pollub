@@ -1,103 +1,103 @@
 -- 4.1.
-CREATE TABLE productcategory (
-    productcategorykey  NUMBER(2) NOT NULL,
-    productcategoryname VARCHAR2(30) NOT NULL
+create table productcategory (
+   productcategorykey  number(2) not null,
+   productcategoryname varchar2(30) not null
 );
 
-CREATE TABLE productsubcategory (
-    productsubcategorykey  NUMBER(3) NOT NULL,
-    productsubcategoryname VARCHAR(40) NOT NULL
+create table productsubcategory (
+   productsubcategorykey  number(3) not null,
+   productsubcategoryname varchar(40) not null
 );
 
 -- 4.2.
-CREATE TABLE product (
-    productkey  NUMBER(5)
-        CONSTRAINT product_pk PRIMARY KEY,
-    productcode VARCHAR2(12) NOT NULL
-        CONSTRAINT product_code_uq UNIQUE,
-    productname VARCHAR2(40) NOT NULL
-        CONSTRAINT product_name_uq UNIQUE
+create table product (
+   productkey  number(5)
+      constraint product_pk primary key,
+   productcode varchar2(12) not null
+      constraint product_code_uq unique,
+   productname varchar2(40) not null
+      constraint product_name_uq unique
 );
 
 -- 4.3.
-ALTER TABLE productsubcategory ADD productcategorykey NUMBER(2) NOT NULL;
+alter table productsubcategory add productcategorykey number(2) not null;
 
-ALTER TABLE product ADD productsubcategorykey NUMBER(3) NOT NULL;
+alter table product add productsubcategorykey number(3) not null;
 
 -- 4.4.
-ALTER TABLE productcategory ADD CONSTRAINT productcategory_pk PRIMARY KEY ( productcategorykey );
+alter table productcategory add constraint productcategory_pk primary key ( productcategorykey );
 
-ALTER TABLE productcategory ADD CONSTRAINT productcategory_name_uq UNIQUE ( productcategoryname );
+alter table productcategory add constraint productcategory_name_uq unique ( productcategoryname );
 
-ALTER TABLE productsubcategory ADD CONSTRAINT productsubcategory_pk PRIMARY KEY ( productsubcategorykey );
+alter table productsubcategory add constraint productsubcategory_pk primary key ( productsubcategorykey );
 
-ALTER TABLE productsubcategory ADD CONSTRAINT productsubcategory_name_uq UNIQUE ( productsubcategoryname );
+alter table productsubcategory add constraint productsubcategory_name_uq unique ( productsubcategoryname );
 
 -- 4.5.
-ALTER TABLE productsubcategory
-    ADD CONSTRAINT productsubcat_cat_fk FOREIGN KEY ( productcategorykey )
-        REFERENCES productcategory ( productcategorykey );
+alter table productsubcategory
+   add constraint productsubcat_cat_fk foreign key ( productcategorykey )
+      references productcategory ( productcategorykey );
 
-ALTER TABLE product
-    ADD CONSTRAINT product_subcategory_fk FOREIGN KEY ( productsubcategorykey )
-        REFERENCES productsubcategory ( productsubcategorykey );
+alter table product
+   add constraint product_subcategory_fk foreign key ( productsubcategorykey )
+      references productsubcategory ( productsubcategorykey );
         
 -- 4.6.
-ALTER TABLE productcategory DISABLE PRIMARY KEY CASCADE;
+alter table productcategory disable primary key cascade;
 
-ALTER TABLE productsubcategory DISABLE CONSTRAINT productsubcategory_pk;
+alter table productsubcategory disable constraint productsubcategory_pk;
 
-ALTER TABLE product DISABLE PRIMARY KEY;
+alter table product disable primary key;
 
 -- 4.7.
-ALTER TABLE productcategory ENABLE PRIMARY KEY;
+alter table productcategory enable primary key;
 
-ALTER TABLE productsubcategory ENABLE CONSTRAINT productsubcategory_pk;
+alter table productsubcategory enable constraint productsubcategory_pk;
 
-ALTER TABLE product ENABLE PRIMARY KEY;
+alter table product enable primary key;
 
-ALTER TABLE productsubcategory ENABLE CONSTRAINT productsubcat_cat_fk;
+alter table productsubcategory enable constraint productsubcat_cat_fk;
 
-ALTER TABLE product ENABLE CONSTRAINT product_subcategory_fk;
+alter table product enable constraint product_subcategory_fk;
 
 -- 4.9.
-CREATE TABLE orderheader (
-    orderkey          NUMBER(12)
-        CONSTRAINT order_pk PRIMARY KEY,
-    orderdate         DATE NOT NULL,
-    deliverydate      DATE,
-    customerkey       NUMBER(10) NOT NULL,
-    channelkey        NUMBER(1) NOT NULL,
-    paymentmethodkey  NUMBER(2) NOT NULL,
-    deliverymethodkey NUMBER(1) NOT NULL,
-    countrykey        NUMBER(2) NOT NULL,
-    orderstatuskey    NUMBER(1) NOT NULL,
-    otherinfo         VARCHAR2(100)
+create table orderheader (
+   orderkey          varchar2(10)
+      constraint order_pk primary key,
+   orderdate         date not null,
+   deliverydate      date,
+   customerkey       number(10) not null,
+   channelkey        number(1) not null,
+   paymentmethodkey  number(2) not null,
+   deliverymethodkey number(1) not null,
+   countrykey        number(2) not null,
+   orderstatuskey    number(1) not null,
+   otherinfo         varchar2(100)
 );
 
-CREATE TABLE orderdetail (
-    orderkey         NUMBER(12) NOT NULL,
-    productkey       NUMBER(5) NOT NULL,
-    quantity         NUMBER(2) DEFAULT 1 NOT NULL,
-    catalogprice     NUMBER(7, 2) NOT NULL,
-    discountamount   NUMBER(5, 2),
-    discountpctg     NUMBER(2),
-    transactionprice NUMBER(7, 2) NOT NULL,
-    CONSTRAINT orderdetail_pk PRIMARY KEY ( orderkey,
-                                            productkey )
+create table orderdetail (
+   orderkey         varchar2(10) not null,
+   productkey       number(5) not null,
+   quantity         number(2) default 1 not null,
+   catalogprice     number(7, 2) not null,
+   discountamount   number(5, 2),
+   discountpctg     number(2),
+   transactionprice number(7, 2) not null,
+   constraint orderdetail_pk primary key ( orderkey,
+                                           productkey )
 );
 
-ALTER TABLE orderdetail
-    ADD CONSTRAINT orderdetail_order_fk FOREIGN KEY ( orderkey )
-        REFERENCES orderheader ( orderkey );
+alter table orderdetail
+   add constraint orderdetail_order_fk foreign key ( orderkey )
+      references orderheader ( orderkey );
 
-ALTER TABLE orderdetail
-    ADD CONSTRAINT orderdetail_product_fk FOREIGN KEY ( productkey )
-        REFERENCES product ( productkey );
+alter table orderdetail
+   add constraint orderdetail_product_fk foreign key ( productkey )
+      references product ( productkey );
 
 -- 4.10.
-ALTER TABLE orderdetail MODIFY
-    discountamount NUMBER(7, 2);
+alter table orderdetail modify
+   discountamount number(7, 2);
 
 -- 4.11.
-ALTER TABLE orderheader DROP ( otherinfo );
+alter table orderheader drop ( otherinfo );
