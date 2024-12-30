@@ -62,7 +62,7 @@ ALTER TABLE product ENABLE CONSTRAINT product_subcategory_fk;
 
 -- 4.9.
 CREATE TABLE orderheader (
-    orderkey          NUMBER(12)
+    orderkey          VARCHAR2(10)
         CONSTRAINT order_pk PRIMARY KEY,
     orderdate         DATE NOT NULL,
     deliverydate      DATE,
@@ -76,7 +76,7 @@ CREATE TABLE orderheader (
 );
 
 CREATE TABLE orderdetail (
-    orderkey         NUMBER(12) NOT NULL,
+    orderkey         VARCHAR2(10) NOT NULL,
     productkey       NUMBER(5) NOT NULL,
     quantity         NUMBER(2) DEFAULT 1 NOT NULL,
     catalogprice     NUMBER(7, 2) NOT NULL,
