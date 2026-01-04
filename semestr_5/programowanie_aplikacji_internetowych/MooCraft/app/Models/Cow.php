@@ -9,6 +9,17 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Cow extends Model
 {
+    protected $fillable = [
+        'user_id',
+        'breed_id',
+        'ai_model_id',
+        'engine_id',
+        'name',
+        'creative_detailing',
+        'description',
+        'image_path',
+    ];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
