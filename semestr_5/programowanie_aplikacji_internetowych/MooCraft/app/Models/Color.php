@@ -9,7 +9,7 @@ class Color extends Model
 {
     protected $fillable = [
         'cow_id',
-        'hex_code',
+        'color',
         'weight',
     ];
 

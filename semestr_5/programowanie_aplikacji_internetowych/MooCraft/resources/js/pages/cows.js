@@ -2,9 +2,9 @@ const totalColors = 5;
 initColorDivs();
 
 function initColorDivs() {
-    showColorDiv(1);
+    showColorDiv(0);
 
-    for (let index = 1; index <= totalColors; index++) {
+    for (let index = 0; index < totalColors; index++) {
         const checkbox = document.getElementById(`color${index}_choose`);
         const inputs = getColorInputs(index);
 
@@ -29,7 +29,7 @@ function enableInputs(inputs, enable) {
 }
 
 function handleShowingNextColorDiv(currentIndex, checkbox) {
-    if (currentIndex >= totalColors) return;
+    if (currentIndex >= totalColors - 1) return;
 
     if (checkbox.checked) {
         showColorDiv(currentIndex + 1);

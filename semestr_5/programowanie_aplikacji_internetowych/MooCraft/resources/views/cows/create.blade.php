@@ -15,7 +15,8 @@
                 <div>
                     <x-input-label for="name" :value="__('Name')"/>
                     <x-text-input id="name" class="block mt-1 w-full" name="name" :value="old('name')"
-                                  required minlength="3" maxlength="255" autofocus autocomplete="off"/>
+                                  required minlength="3" maxlength="255" autofocus autocomplete="off"
+                                  placeholder="e.g. StackOverMoo"/>
                     <x-input-error :messages="$errors->get('name')" class="mt-2"/>
                 </div>
 
@@ -61,16 +62,16 @@
                 <!-- Colors -->
                 <x-input-label class="mt-4" :value="__('Colors')"/>
                 <div class="grid gap-1">
-                    @for ($i = 1; $i <= 5; $i++)
+                    @for ($i = 0; $i < 5; $i++)
                         <div id="color{{ $i }}"
                              class="grid grid-cols-[1fr_2fr_2fr] gap-4 md:gap-10 items-center hidden">
                             <!-- Choose -->
                             <label for="color{{ $i }}_choose" class="inline-flex items-center">
                                 <input id="color{{ $i }}_choose" type="checkbox"
                                        class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
-                                    @checked(count(old('colors', [])) >= $i)>
+                                    @checked(count(old('colors', [])) > $i)>
                                 <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">
-                                    {{ __('Choose color') }}&nbsp;#{{ $i }}
+                                    {{ __('Choose color') }}&nbsp;#{{ $i + 1 }}
                                 </span>
                             </label>
 
@@ -79,9 +80,9 @@
                                 <x-input-label for="color{{ $i }}_value" :value="__('Value')"/>
                                 <x-text-input id="color{{ $i }}_value"
                                               class="block mt-1 w-full h-10 disabled:opacity-50 disabled:bg-gray-200 disabled:dark:bg-gray-900 disabled:cursor-not-allowed"
-                                              type="color" name="colors[{{ $i }}][hex_code]"
-                                              :value='old("colors.$i.hex_code")' required/>
-                                <x-input-error :messages="$errors->get('colors.' . $i . '.hex_code')" class="mt-2"/>
+                                              type="color" name="colors[{{ $i }}][color]"
+                                              :value='old("colors.$i.color")' required/>
+                                <x-input-error :messages="$errors->get('colors.' . $i . '.color')" class="mt-2"/>
                             </div>
 
                             <!-- Weight -->
@@ -116,8 +117,7 @@
                                 class="block mt-1 w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
                                 name="ai_model_id">
                             @foreach ($aiModels as $aiModel)
-                                <option
-                                    value="{{ $aiModel->id }}" {{ old('ai_model_id') == $aiModel->id ? 'selected' : '' }}>
+                                <option value="{{ $aiModel->id }}" @selected(old('ai_model_id', 1) == $aiModel->id)>
                                     {{ $aiModel->name }}
                                 </option>
                             @endforeach
@@ -132,8 +132,7 @@
                                 class="block mt-1 w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
                                 name="engine_id">
                             @foreach ($engines as $engine)
-                                <option
-                                    value="{{ $engine->id }}" {{ old('engine_id') == $engine->id ? 'selected' : '' }}>
+                                <option value="{{ $engine->id }}" @selected(old('engine_id', 1) == $engine->id)>
                                     {{ $engine->name }}
                                 </option>
                             @endforeach

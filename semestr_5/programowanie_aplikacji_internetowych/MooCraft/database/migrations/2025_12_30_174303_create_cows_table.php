@@ -52,7 +52,7 @@ return new class extends Migration {
         Schema::create('colors', function (Blueprint $table) {
             $table->id();
             $table->foreignId('cow_id')->constrained()->cascadeOnDelete();
-            $table->string('hex_code', 7);
+            $table->string('color', 7);
             $table->decimal('weight', 3, 2);
         });
 
