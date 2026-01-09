@@ -6,6 +6,7 @@ use App\Models\AiModel;
 use App\Models\Breed;
 use App\Models\Engine;
 use App\Models\Theme;
+use App\Services\FreepikAiService;
 use Illuminate\Http\Request;
 
 class CowController extends Controller
@@ -23,12 +24,12 @@ class CowController extends Controller
      */
     public function create()
     {
-        $breeds = Breed::all()->sortBy('name');
-        $themes = Theme::all()->sortBy('name');
-        $aiModels = AiModel::all()->sortBy('name');
-        $engines = Engine::all()->sortBy('name');
-
-        return view('cows.create', compact('breeds', 'themes', 'aiModels', 'engines'));
+        return view('cows.create', [
+            'breeds' => Breed::getOrdered(),
+            'themes' => Theme::getOrdered(),
+            'aiModels' => AiModel::getOrdered(),
+            'engines' => Engine::getOrdered(),
+        ]);
     }
 
     /**
@@ -37,8 +38,8 @@ class CowController extends Controller
     public function store(Request $request)
     {
         $validated = $this->validate($request);
+        $validated['freepik_task_id'] = $this->startImageGeneration($validated);
         $this->save($validated);
-
         return redirect(route('home'));
     }
 
@@ -53,7 +54,7 @@ class CowController extends Controller
             'theme_ids.*' => ['distinct', 'integer', 'exists:themes,id'],
 
             'colors' => ['nullable', 'array', 'between:1,5'],
-            'colors.*.hex_code' => ['required', 'distinct', 'string', 'hex_color'],
+            'colors.*.color' => ['required', 'distinct', 'string', 'hex_color'],
             'colors.*.weight' => ['required', 'numeric', 'between:0.05,1'],
 
             'creative_detailing' => ['required', 'integer', 'between:0,100'],
@@ -63,6 +64,46 @@ class CowController extends Controller
 
             'description' => ['nullable', 'string', 'min:3'],
         ]);
+    }
+
+    private function startImageGeneration(array $validated): string
+    {
+        $data = $this->formatImageRequestData($validated);
+        return FreepikAiService::startImageGeneration($data);
+    }
+
+    private function formatImageRequestData(array $validated): array
+    {
+        $data = [
+            'prompt' => $this->buildPrompt($validated),
+            'creative_detailing' => $validated['creative_detailing'],
+            'model' => AiModel::getSnake($validated['ai_model_id']),
+            'engine' => Engine::getSnake($validated['engine_id']),
+        ];
+        if (!empty($validated['colors'])) {
+            $data['styling']['colors'] = $validated['colors'];
+        }
+        return $data;
+    }
+
+    private function buildPrompt(array $validated): string
+    {
+        $prompt = $this->formatIntroduction($validated['name'], $validated['breed_id']);
+        $prompt .= ' ' . $this->formatThemes($validated['theme_ids']);
+        $prompt .= ' ' . $validated['description'];
+        return rtrim($prompt);
+    }
+
+    private function formatIntroduction(string $name, int $breedId): string
+    {
+        $breedName = Breed::getName($breedId);
+        return "A cow named '$name' of the '$breedName' breed.";
+    }
+
+    private function formatThemes(?array $themeIds): string
+    {
+        $themes = Theme::getNames($themeIds ?? []);
+        return $themes ? "It reflects the following themes: $themes." : '';
     }
 
     private function save(array $validated)

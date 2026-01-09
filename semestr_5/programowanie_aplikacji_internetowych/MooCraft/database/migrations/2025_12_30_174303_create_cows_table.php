@@ -32,6 +32,7 @@ return new class extends Migration {
 
         Schema::create('cows', function (Blueprint $table) {
             $table->id();
+            $table->string('freepik_task_id')->unique();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('breed_id')->constrained()->restrictOnDelete();
             $table->foreignId('ai_model_id')->constrained()->restrictOnDelete();
@@ -39,7 +40,7 @@ return new class extends Migration {
             $table->string('name');
             $table->unsignedTinyInteger('creative_detailing');
             $table->text('description')->nullable();
-            $table->string('image_path')->nullable();
+            $table->string('image_id')->nullable()->unique();
             $table->timestamps();
         });
 

@@ -11,14 +11,25 @@ class Cow extends Model
 {
     protected $fillable = [
         'user_id',
+        'freepik_task_id',
         'breed_id',
         'ai_model_id',
         'engine_id',
         'name',
         'creative_detailing',
         'description',
-        'image_path',
+        'image_id',
     ];
+
+    public static function updateImageId(string $freepikTaskId, string $imageId): void
+    {
+        static::where('freepik_task_id', $freepikTaskId)->update(['image_id' => $imageId]);
+    }
+
+    public static function deleteByFreepikTaskId(string $freepikTaskId): void
+    {
+        static::where('freepik_task_id', $freepikTaskId)->delete();
+    }
 
     public function user(): BelongsTo
     {
