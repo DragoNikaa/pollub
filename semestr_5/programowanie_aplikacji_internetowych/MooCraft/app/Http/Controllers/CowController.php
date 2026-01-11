@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AiModel;
 use App\Models\Breed;
+use App\Models\Cow;
 use App\Models\Engine;
 use App\Models\Theme;
 use App\Services\FreepikAiService;
@@ -16,7 +17,9 @@ class CowController extends Controller
      */
     public function index()
     {
-        //
+        $cows = Cow::with(['user', 'breed', 'aiModel', 'engine', 'themes', 'colors'])
+            ->latest()->paginate(6);
+        return view('cows.index', compact('cows'));
     }
 
     /**
@@ -89,7 +92,7 @@ class CowController extends Controller
     private function buildPrompt(array $validated): string
     {
         $prompt = $this->formatIntroduction($validated['name'], $validated['breed_id']);
-        $prompt .= ' ' . $this->formatThemes($validated['theme_ids']);
+        $prompt .= ' ' . $this->formatThemes($validated['theme_ids'] ?? []);
         $prompt .= ' ' . $validated['description'];
         return rtrim($prompt);
     }
@@ -100,9 +103,9 @@ class CowController extends Controller
         return "A cow named '$name' of the '$breedName' breed.";
     }
 
-    private function formatThemes(?array $themeIds): string
+    private function formatThemes(array $themeIds): string
     {
-        $themes = Theme::getNames($themeIds ?? []);
+        $themes = Theme::getNames($themeIds);
         return $themes ? "It reflects the following themes: $themes." : '';
     }
 

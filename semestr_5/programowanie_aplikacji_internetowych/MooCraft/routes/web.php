@@ -12,6 +12,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/cows', [CowController::class, 'index'])->name('cows.index');
+
 Route::middleware('auth')->group(function () {
     Route::get('/cows/create', [CowController::class, 'create'])->name('cows.create');
     Route::post('/cows', [CowController::class, 'store'])->name('cows.store');

@@ -31,6 +31,11 @@ class Cow extends Model
         static::where('freepik_task_id', $freepikTaskId)->delete();
     }
 
+    public function getImagePath()
+    {
+        return '/storage/cows/' . ($this->image_id ?? 'placeholder') . '.png';
+    }
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
