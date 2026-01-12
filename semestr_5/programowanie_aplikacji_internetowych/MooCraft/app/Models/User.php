@@ -47,8 +47,25 @@ class User extends Authenticatable
         ];
     }
 
+    public function addNotification(string $message): void
+    {
+        $this->notifications()->create([
+            'message' => $message,
+        ]);
+    }
+
+    public function getLatestUnreadNotification(): ?Notification
+    {
+        return $this->notifications()->where('read', false)->latest()->first();
+    }
+
     public function cows(): HasMany
     {
         return $this->hasMany(Cow::class)->latest();
+    }
+
+    public function notifications(): HasMany
+    {
+        return $this->hasMany(Notification::class)->latest();
     }
 }

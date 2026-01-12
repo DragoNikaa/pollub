@@ -46,7 +46,7 @@ class CowController extends Controller
         return redirect(route('home'));
     }
 
-    private function validate(Request $request)
+    private function validate(Request $request): array
     {
         return $request->validate([
             'name' => ['required', 'string', 'between:3,255'],
@@ -72,7 +72,7 @@ class CowController extends Controller
     private function startImageGeneration(array $validated): string
     {
         $data = $this->formatImageRequestData($validated);
-        return FreepikAiService::startImageGeneration($data);
+        return FreepikAiService::startImageGeneration($data, $validated['name']);
     }
 
     private function formatImageRequestData(array $validated): array
@@ -109,7 +109,7 @@ class CowController extends Controller
         return $themes ? "It reflects the following themes: $themes." : '';
     }
 
-    private function save(array $validated)
+    private function save(array $validated): void
     {
         $cow = auth()->user()->cows()->create($validated);
         $cow->themes()->attach($validated['theme_ids'] ?? []);

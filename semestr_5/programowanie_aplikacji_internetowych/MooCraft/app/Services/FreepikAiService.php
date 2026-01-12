@@ -7,11 +7,11 @@ use Illuminate\Support\Facades\Http;
 
 class FreepikAiService
 {
-    public static function startImageGeneration(array $cowData): string
+    public static function startImageGeneration(array $cowData, string $cowName): string
     {
         $data = $cowData + static::getDefaultRequestData();
         $response = static::sendRequest($data);
-        static::handleResponseStatus($response);
+        static::handleResponseStatus($response, $cowName);
         return $response->json('data.task_id');
     }
 
@@ -34,12 +34,15 @@ class FreepikAiService
         ])->post(config('services.freepik.api_url'), $data);
     }
 
-    private static function handleResponseStatus(Response $response): void
+    private static function handleResponseStatus(Response $response, string $cowName): void
     {
         if ($response->failed()) {
             logger()->error('Freepik API error', $response->json());
             abort(500, 'Freepik API error');
         }
+        auth()->user()->addNotification(
+            "Mooment of patience… 🐄 Your cow '$cowName' is being generated. We'll let you know when it's ready!"
+        );
         logger()->info('Freepik API response', $response->json());
     }
 }

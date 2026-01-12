@@ -31,7 +31,12 @@ class Cow extends Model
         static::where('freepik_task_id', $freepikTaskId)->delete();
     }
 
-    public function getImagePath()
+    public static function getByFreepikTaskId(string $freepikTaskId): static
+    {
+        return static::firstWhere('freepik_task_id', $freepikTaskId);
+    }
+
+    public function getImagePath(): string
     {
         return '/storage/cows/' . ($this->image_id ?? 'placeholder') . '.png';
     }

@@ -14,6 +14,12 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
+@if (session('toast'))
+    <div id="toast"
+         class="fixed bottom-5 right-5 p-6 ml-5 shadow-2xl rounded-lg text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 opacity-0 transition duration-300 ease-in cursor-pointer">
+        {{ session('toast.message') }}
+    </div>
+@endif
 <body class="font-sans antialiased">
 <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
     @include('layouts.navigation')
