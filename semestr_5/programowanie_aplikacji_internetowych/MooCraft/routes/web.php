@@ -2,10 +2,15 @@
 
 use App\Http\Controllers\CowController;
 use App\Http\Controllers\ProfileController;
+use App\Models\AiModel;
+use App\Models\Engine;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        'aiModels' => AiModel::getOrdered(),
+        'engines' => Engine::getOrdered(),
+    ]);
 })->name('home');
 
 Route::get('/dashboard', function () {
