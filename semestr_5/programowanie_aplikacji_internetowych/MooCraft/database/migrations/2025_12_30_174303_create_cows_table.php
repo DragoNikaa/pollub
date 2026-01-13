@@ -23,11 +23,13 @@ return new class extends Migration {
         Schema::create('ai_models', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->text('description');
         });
 
         Schema::create('engines', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->text('description');
         });
 
         Schema::create('cows', function (Blueprint $table) {
