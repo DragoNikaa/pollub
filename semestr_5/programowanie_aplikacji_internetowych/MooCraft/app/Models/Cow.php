@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Storage;
 
 class Cow extends Model
 {
@@ -38,7 +39,7 @@ class Cow extends Model
 
     public function getImagePath(): string
     {
-        return '/storage/cows/' . ($this->image_id ?? 'placeholder') . '.png';
+        return Storage::url('cows/' . ($this->image_id ?? 'placeholder') . '.png');
     }
 
     public function user(): BelongsTo
