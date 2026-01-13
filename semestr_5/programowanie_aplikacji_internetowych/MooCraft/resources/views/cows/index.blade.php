@@ -6,12 +6,14 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start gap-8">
             @foreach ($cows as $cow)
                 <div
                     class="text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 overflow-hidden shadow-md sm:rounded-lg">
                     <!-- Image -->
-                    <img src="{{ $cow->getImagePath() }}" alt="Cow {{ $cow->name }}">
+                    <a href="{{ $cow->getImagePath() }}" target="_blank">
+                        <img src="{{ $cow->getImagePath() }}" alt="Cow {{ $cow->name }}">
+                    </a>
 
                     <div class="px-6 py-4 space-y-4">
                         <div class="flex items-center justify-between gap-6">
