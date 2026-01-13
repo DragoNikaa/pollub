@@ -9,9 +9,16 @@ use App\Models\Engine;
 use App\Models\Theme;
 use App\Services\FreepikAiService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class CowController extends Controller
 {
+    private array $nameRules = [
+        'required',
+        'string',
+        'between:3,255',
+    ];
+
     /**
      * Display a listing of the resource.
      */
@@ -43,13 +50,13 @@ class CowController extends Controller
         $validated = $this->validate($request);
         $validated['freepik_task_id'] = $this->startImageGeneration($validated);
         $this->save($validated);
-        return redirect(route('home'));
+        return redirect()->route('home');
     }
 
     private function validate(Request $request): array
     {
         return $request->validate([
-            'name' => ['required', 'string', 'between:3,255'],
+            'name' => $this->nameRules,
 
             'breed_id' => ['required', 'integer', 'exists:breeds,id'],
 
@@ -127,24 +134,43 @@ class CowController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Cow $cow)
     {
-        //
+        Gate::authorize('update', $cow);
+        return view('cows.edit', compact('cow'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Cow $cow)
     {
-        //
+        Gate::authorize('update', $cow);
+        $this->updateName($request, $cow);
+        auth()->user()->addNotification(
+            "Name change complete. 🐄 Say hello to cow '$cow->name'!"
+        );
+        return redirect()->route('cows.index');
+    }
+
+    private function updateName(Request $request, Cow $cow): void
+    {
+        $validated = $request->validate([
+            'name' => $this->nameRules,
+        ]);
+        $cow->update($validated);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Cow $cow)
     {
-        //
+        Gate::authorize('delete', $cow);
+        $cow->delete();
+        auth()->user()->addNotification(
+            "The herd just got smaller… 🐄 Cow '$cow->name' has been deleted!"
+        );
+        return redirect()->route('cows.index');
     }
 }
