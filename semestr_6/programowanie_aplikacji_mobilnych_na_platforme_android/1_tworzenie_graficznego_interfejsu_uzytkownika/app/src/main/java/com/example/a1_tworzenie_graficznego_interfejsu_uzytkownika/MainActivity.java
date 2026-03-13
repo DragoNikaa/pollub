@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -14,11 +13,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.a1_tworzenie_graficznego_interfejsu_uzytkownika.databinding.ActivityMainConstraintBinding;
+
 import java.util.HashSet;
 import java.util.function.Predicate;
 
 public class MainActivity extends AppCompatActivity {
     private static final int TOTAL_EDIT_TEXTS = 3;
+
     private static final Predicate<String> FIRST_NAME_VALIDATOR = text -> text.matches("^[A-ZŁŻ][a-ząćęłńóśźż]{1,25}$");
     private static final Predicate<String> LAST_NAME_VALIDATOR = text -> text.matches("^[A-ZŁŚŻ][a-ząćęłńóśźż]{1,25}(?:-[A-ZŁŚŻ][a-ząćęłńóśźż]{1,25})?$");
     private static final Predicate<String> GRADE_NUMBER_VALIDATOR = text -> {
@@ -27,27 +29,28 @@ public class MainActivity extends AppCompatActivity {
         return value >= 5 && value <= 15;
     };
 
-    private EditText firstNameEditText;
-    private EditText lastNameEditText;
-    private EditText gradeNumberEditText;
-    private Button gradesButton;
-
+    private ActivityMainConstraintBinding binding;
     private final HashSet<EditText> validEditTexts = new HashSet<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        setupEdgeToEdge();
 
+        setupViewBinding();
+        setupEdgeToEdge();
         setupToolbar();
         setupEditTexts();
-        setupGradesButton();
+    }
+
+    private void setupViewBinding() {
+        binding = ActivityMainConstraintBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
     }
 
     private void setupEdgeToEdge() {
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        EdgeToEdge.enable(this);
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -55,29 +58,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupToolbar() {
-        setSupportActionBar(findViewById(R.id.toolbar));
+        setSupportActionBar(binding.toolbar);
     }
 
     private void setupEditTexts() {
-        firstNameEditText = findViewById(R.id.edit_first_name);
-        setupEditText(firstNameEditText, FIRST_NAME_VALIDATOR, R.string.first_name_error_required, R.string.first_name_error_invalid);
-
-        lastNameEditText = findViewById(R.id.edit_last_name);
-        setupEditText(lastNameEditText, LAST_NAME_VALIDATOR, R.string.last_name_error_required, R.string.last_name_error_invalid);
-
-        gradeNumberEditText = findViewById(R.id.edit_grade_number);
-        setupEditText(gradeNumberEditText, GRADE_NUMBER_VALIDATOR, R.string.grade_number_error_required, R.string.grade_number_error_invalid);
+        setupEditText(binding.editFirstName, FIRST_NAME_VALIDATOR, R.string.first_name_error_required, R.string.first_name_error_invalid);
+        setupEditText(binding.editLastName, LAST_NAME_VALIDATOR, R.string.last_name_error_required, R.string.last_name_error_invalid);
+        setupEditText(binding.editGradeNumber, GRADE_NUMBER_VALIDATOR, R.string.grade_number_error_required, R.string.grade_number_error_invalid);
     }
 
     private void setupEditText(EditText editText, Predicate<String> validator, int requiredErrorMessage, int invalidErrorMessage) {
-        editText.setOnFocusChangeListener((view, hasFocus) -> onFocusChange(hasFocus, editText, validator, requiredErrorMessage, invalidErrorMessage));
+        editText.setOnFocusChangeListener((v, hasFocus) -> onFocusChange(hasFocus, editText, validator, requiredErrorMessage, invalidErrorMessage));
         editText.addTextChangedListener(createTextWatcher(editText, validator));
-        updateValidEditTexts(editText, editText.getText().toString(), validator);
-    }
-
-    private void setupGradesButton() {
-        gradesButton = findViewById(R.id.button_grades);
-        updateGradesButtonVisibility();
     }
 
     private void onFocusChange(boolean hasFocus, EditText editText, Predicate<String> validator, int requiredErrorMessage, int invalidErrorMessage) {
@@ -119,6 +111,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateGradesButtonVisibility() {
-        gradesButton.setVisibility(validEditTexts.size() == TOTAL_EDIT_TEXTS ? View.VISIBLE : View.INVISIBLE);
+        binding.buttonGrades.setVisibility(validEditTexts.size() == TOTAL_EDIT_TEXTS ? View.VISIBLE : View.INVISIBLE);
     }
 }
