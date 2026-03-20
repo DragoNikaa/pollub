@@ -121,15 +121,13 @@ public class MainActivity extends BaseActivity<ActivityMainConstraintBinding> {
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
-        if (average != 0) outState.putDouble(GradesActivity.AVERAGE_KEY, average);
+        outState.putDouble(GradesActivity.AVERAGE_KEY, average);
         super.onSaveInstanceState(outState);
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        if (!savedInstanceState.containsKey(GradesActivity.AVERAGE_KEY)) return;
-
         average = savedInstanceState.getDouble(GradesActivity.AVERAGE_KEY);
         displayAverageResult();
     }
