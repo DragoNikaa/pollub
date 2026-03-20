@@ -9,9 +9,9 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
         android:background="?attr/colorPrimary"
-        app:title="@string/toolbar_title"
+        app:title="@string/main_toolbar_title"
         app:titleTextColor="@color/white" />
 
     <LinearLayout
@@ -75,6 +75,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:orientation="vertical"
         android:paddingVertical="16dp">
 
         <Button
@@ -82,6 +83,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/grades_button"
-            android:visibility="invisible" />
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/average_result_label"
+            android:visibility="gone" />
     </LinearLayout>
 </LinearLayout>
