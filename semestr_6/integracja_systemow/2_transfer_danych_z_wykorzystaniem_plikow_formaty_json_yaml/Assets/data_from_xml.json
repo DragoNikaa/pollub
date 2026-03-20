@@ -1,0 +1,1462 @@
+{
+  "departments": [
+    {
+      "Kod_TERYT": "0601032",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Biała Podlaska",
+      "miejscowość": "Biała Podlaska",
+      "telefon_z_numerem_kierunkowym": "+83 3434950"
+    },
+    {
+      "Kod_TERYT": "0601042",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Drelów",
+      "miejscowość": "Drelów",
+      "telefon_z_numerem_kierunkowym": "+83 3723221"
+    },
+    {
+      "Kod_TERYT": "0601052",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Janów Podlaski",
+      "miejscowość": "Janów Podlaski",
+      "telefon_z_numerem_kierunkowym": "+83 3413073"
+    },
+    {
+      "Kod_TERYT": "0601062",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Kodeń",
+      "miejscowość": "Kodeń",
+      "telefon_z_numerem_kierunkowym": "+83 3754155"
+    },
+    {
+      "Kod_TERYT": "0601072",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Konstantynów",
+      "miejscowość": "Konstantynów",
+      "telefon_z_numerem_kierunkowym": "+83 3414192"
+    },
+    {
+      "Kod_TERYT": "0601082",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Leśna Podlaska",
+      "miejscowość": "Leśna Podlaska",
+      "telefon_z_numerem_kierunkowym": "+83 3450720"
+    },
+    {
+      "Kod_TERYT": "0601092",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Łomazy",
+      "miejscowość": "Łomazy",
+      "telefon_z_numerem_kierunkowym": "+83 3417003"
+    },
+    {
+      "Kod_TERYT": "0601102",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Międzyrzec Podlaski",
+      "miejscowość": "Międzyrzec Podlaski",
+      "telefon_z_numerem_kierunkowym": "+83 3712496"
+    },
+    {
+      "Kod_TERYT": "0601112",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Piszczac",
+      "miejscowość": "Piszczac",
+      "telefon_z_numerem_kierunkowym": "+83 3778018"
+    },
+    {
+      "Kod_TERYT": "0601122",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Rokitno",
+      "miejscowość": "Rokitno",
+      "telefon_z_numerem_kierunkowym": "+83 3453550"
+    },
+    {
+      "Kod_TERYT": "0601132",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Rossosz",
+      "miejscowość": "Rossosz",
+      "telefon_z_numerem_kierunkowym": "+83 3784557"
+    },
+    {
+      "Kod_TERYT": "0601142",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Sławatycze",
+      "miejscowość": "Sławatycze",
+      "telefon_z_numerem_kierunkowym": "+83 3783358"
+    },
+    {
+      "Kod_TERYT": "0601152",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Sosnówka",
+      "miejscowość": "Sosnówka",
+      "telefon_z_numerem_kierunkowym": "+83 3793019"
+    },
+    {
+      "Kod_TERYT": "0601162",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Terespol",
+      "miejscowość": "Kobylany",
+      "telefon_z_numerem_kierunkowym": "+83 4112000"
+    },
+    {
+      "Kod_TERYT": "0601172",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Tuczna",
+      "miejscowość": "Tuczna",
+      "telefon_z_numerem_kierunkowym": "+83 3771003"
+    },
+    {
+      "Kod_TERYT": "0601182",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wisznice",
+      "miejscowość": "Wisznice",
+      "telefon_z_numerem_kierunkowym": "+83 3782102"
+    },
+    {
+      "Kod_TERYT": "0601192",
+      "Województwo": "lubelskie",
+      "Powiat": "bialski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Zalesie",
+      "miejscowość": "Zalesie",
+      "telefon_z_numerem_kierunkowym": "+83 3757586"
+    },
+    {
+      "Kod_TERYT": "0602022",
+      "Województwo": "lubelskie",
+      "Powiat": "biłgorajski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Aleksandrów",
+      "miejscowość": "Aleksandrów",
+      "telefon_z_numerem_kierunkowym": "+84 6875002"
+    },
+    {
+      "Kod_TERYT": "0602032",
+      "Województwo": "lubelskie",
+      "Powiat": "biłgorajski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Biłgoraj",
+      "miejscowość": "Biłgoraj",
+      "telefon_z_numerem_kierunkowym": "+84 6882830"
+    },
+    {
+      "Kod_TERYT": "0602042",
+      "Województwo": "lubelskie",
+      "Powiat": "biłgorajski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Biszcza",
+      "miejscowość": "Biszcza",
+      "telefon_z_numerem_kierunkowym": "+84 6856022"
+    },
+    {
+      "Kod_TERYT": "0602082",
+      "Województwo": "lubelskie",
+      "Powiat": "biłgorajski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Księżpol",
+      "miejscowość": "Księżpol",
+      "telefon_z_numerem_kierunkowym": "+84 6877419"
+    },
+    {
+      "Kod_TERYT": "0602092",
+      "Województwo": "lubelskie",
+      "Powiat": "biłgorajski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Łukowa",
+      "miejscowość": "Łukowa",
+      "telefon_z_numerem_kierunkowym": "+84 6874002"
+    },
+    {
+      "Kod_TERYT": "0602102",
+      "Województwo": "lubelskie",
+      "Powiat": "biłgorajski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Obsza",
+      "miejscowość": "Obsza",
+      "telefon_z_numerem_kierunkowym": "+84 6891002"
+    },
+    {
+      "Kod_TERYT": "0602112",
+      "Województwo": "lubelskie",
+      "Powiat": "biłgorajski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Potok Górny",
+      "miejscowość": "Potok Górny",
+      "telefon_z_numerem_kierunkowym": "+84 6852518"
+    },
+    {
+      "Kod_TERYT": "0602132",
+      "Województwo": "lubelskie",
+      "Powiat": "biłgorajski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Tereszpol",
+      "miejscowość": "Tereszpol",
+      "telefon_z_numerem_kierunkowym": "+84 6876005"
+    },
+    {
+      "Kod_TERYT": "0602142",
+      "Województwo": "lubelskie",
+      "Powiat": "biłgorajski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Turobin",
+      "miejscowość": "Turobin",
+      "telefon_z_numerem_kierunkowym": "+84 6833335"
+    },
+    {
+      "Kod_TERYT": "0603022",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Białopole",
+      "miejscowość": "Białopole",
+      "telefon_z_numerem_kierunkowym": "+82 5682204"
+    },
+    {
+      "Kod_TERYT": "0603032",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Chełm",
+      "miejscowość": "Pokrówka",
+      "telefon_z_numerem_kierunkowym": "+82 5636553"
+    },
+    {
+      "Kod_TERYT": "0603042",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Dorohusk",
+      "miejscowość": "Dorohusk-Osada",
+      "telefon_z_numerem_kierunkowym": "+82 5661089"
+    },
+    {
+      "Kod_TERYT": "0603052",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Dubienka",
+      "miejscowość": "Dubienka",
+      "telefon_z_numerem_kierunkowym": "+82 5668002"
+    },
+    {
+      "Kod_TERYT": "0603062",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Kamień",
+      "miejscowość": "Kamień",
+      "telefon_z_numerem_kierunkowym": "+82 5671551"
+    },
+    {
+      "Kod_TERYT": "0603072",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Leśniowice",
+      "miejscowość": "Leśniowice",
+      "telefon_z_numerem_kierunkowym": "+82 5675494"
+    },
+    {
+      "Kod_TERYT": "0603082",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Rejowiec Fabryczny",
+      "miejscowość": "Rejowiec Fabryczny",
+      "telefon_z_numerem_kierunkowym": "+82 5664211"
+    },
+    {
+      "Kod_TERYT": "0603092",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Ruda-Huta",
+      "miejscowość": "Ruda-Huta",
+      "telefon_z_numerem_kierunkowym": "+82 5686033"
+    },
+    {
+      "Kod_TERYT": "0603102",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Sawin",
+      "miejscowość": "Sawin",
+      "telefon_z_numerem_kierunkowym": "+82 5673012"
+    },
+    {
+      "Kod_TERYT": "0603122",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wierzbica",
+      "miejscowość": "Wierzbica - Osiedle",
+      "telefon_z_numerem_kierunkowym": "+82 5693266"
+    },
+    {
+      "Kod_TERYT": "0603132",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wojsławice",
+      "miejscowość": "Wojsławice",
+      "telefon_z_numerem_kierunkowym": "+82 5669102"
+    },
+    {
+      "Kod_TERYT": "0603142",
+      "Województwo": "lubelskie",
+      "Powiat": "chełmski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Żmudź",
+      "miejscowość": "Żmudź",
+      "telefon_z_numerem_kierunkowym": "+82 5680182"
+    },
+    {
+      "Kod_TERYT": "0604022",
+      "Województwo": "lubelskie",
+      "Powiat": "hrubieszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Dołhobyczów",
+      "miejscowość": "Dołhobyczów",
+      "telefon_z_numerem_kierunkowym": "+84 6532524"
+    },
+    {
+      "Kod_TERYT": "0604032",
+      "Województwo": "lubelskie",
+      "Powiat": "hrubieszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Horodło",
+      "miejscowość": "Horodło",
+      "telefon_z_numerem_kierunkowym": "+84 6515447"
+    },
+    {
+      "Kod_TERYT": "0604042",
+      "Województwo": "lubelskie",
+      "Powiat": "hrubieszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Hrubieszów",
+      "miejscowość": "Hrubieszów",
+      "telefon_z_numerem_kierunkowym": "+84 6962681"
+    },
+    {
+      "Kod_TERYT": "0604052",
+      "Województwo": "lubelskie",
+      "Powiat": "hrubieszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Mircze",
+      "miejscowość": "Mircze",
+      "telefon_z_numerem_kierunkowym": "+84 6519004"
+    },
+    {
+      "Kod_TERYT": "0604062",
+      "Województwo": "lubelskie",
+      "Powiat": "hrubieszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Trzeszczany",
+      "miejscowość": "Trzeszczany",
+      "telefon_z_numerem_kierunkowym": "+84 6575059"
+    },
+    {
+      "Kod_TERYT": "0604072",
+      "Województwo": "lubelskie",
+      "Powiat": "hrubieszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Uchanie",
+      "miejscowość": "Uchanie",
+      "telefon_z_numerem_kierunkowym": "+84 6577266"
+    },
+    {
+      "Kod_TERYT": "0604082",
+      "Województwo": "lubelskie",
+      "Powiat": "hrubieszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Werbkowice",
+      "miejscowość": "Werbkowice",
+      "telefon_z_numerem_kierunkowym": "+84 6572005"
+    },
+    {
+      "Kod_TERYT": "0605012",
+      "Województwo": "lubelskie",
+      "Powiat": "janowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Batorz",
+      "miejscowość": "Batorz - Pierwsza",
+      "telefon_z_numerem_kierunkowym": "+15 8745134"
+    },
+    {
+      "Kod_TERYT": "0605022",
+      "Województwo": "lubelskie",
+      "Powiat": "janowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Chrzanów",
+      "miejscowość": "Chrzanów",
+      "telefon_z_numerem_kierunkowym": "+15 8755132"
+    },
+    {
+      "Kod_TERYT": "0605032",
+      "Województwo": "lubelskie",
+      "Powiat": "janowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Dzwola",
+      "miejscowość": "Dzwola",
+      "telefon_z_numerem_kierunkowym": "+15 8752215"
+    },
+    {
+      "Kod_TERYT": "0605042",
+      "Województwo": "lubelskie",
+      "Powiat": "janowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Godziszów",
+      "miejscowość": "Godziszów Trzeci",
+      "telefon_z_numerem_kierunkowym": "+15 8710002"
+    },
+    {
+      "Kod_TERYT": "0605072",
+      "Województwo": "lubelskie",
+      "Powiat": "janowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Potok Wielki",
+      "miejscowość": "Potok Wielki",
+      "telefon_z_numerem_kierunkowym": "+15 8740204"
+    },
+    {
+      "Kod_TERYT": "0606022",
+      "Województwo": "lubelskie",
+      "Powiat": "krasnostawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Fajsławice",
+      "miejscowość": "Fajsławice",
+      "telefon_z_numerem_kierunkowym": "+81 5853002"
+    },
+    {
+      "Kod_TERYT": "0606032",
+      "Województwo": "lubelskie",
+      "Powiat": "krasnostawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Gorzków",
+      "miejscowość": "Gorzków",
+      "telefon_z_numerem_kierunkowym": "+84 6838156"
+    },
+    {
+      "Kod_TERYT": "0606052",
+      "Województwo": "lubelskie",
+      "Powiat": "krasnostawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Krasnystaw",
+      "miejscowość": "Krasnystaw",
+      "telefon_z_numerem_kierunkowym": "+82 5763753"
+    },
+    {
+      "Kod_TERYT": "0606062",
+      "Województwo": "lubelskie",
+      "Powiat": "krasnostawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Kraśniczyn",
+      "miejscowość": "Kraśniczyn",
+      "telefon_z_numerem_kierunkowym": "+82 5775511"
+    },
+    {
+      "Kod_TERYT": "0606072",
+      "Województwo": "lubelskie",
+      "Powiat": "krasnostawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Łopiennik Górny",
+      "miejscowość": "Łopiennik Górny 1",
+      "telefon_z_numerem_kierunkowym": "+82 5773004"
+    },
+    {
+      "Kod_TERYT": "0606092",
+      "Województwo": "lubelskie",
+      "Powiat": "krasnostawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Rudnik",
+      "miejscowość": "Rudnik",
+      "telefon_z_numerem_kierunkowym": "+84 6841123"
+    },
+    {
+      "Kod_TERYT": "0606102",
+      "Województwo": "lubelskie",
+      "Powiat": "krasnostawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Siennica Różana",
+      "miejscowość": "Siennica Różana",
+      "telefon_z_numerem_kierunkowym": "+82 5759281"
+    },
+    {
+      "Kod_TERYT": "0606112",
+      "Województwo": "lubelskie",
+      "Powiat": "krasnostawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Żółkiewka",
+      "miejscowość": "Żółkiewka - Osada",
+      "telefon_z_numerem_kierunkowym": "+84 6831676"
+    },
+    {
+      "Kod_TERYT": "0607032",
+      "Województwo": "lubelskie",
+      "Powiat": "kraśnicki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Dzierzkowice",
+      "miejscowość": "Dzierzkowice",
+      "telefon_z_numerem_kierunkowym": "+81 8221006"
+    },
+    {
+      "Kod_TERYT": "0607042",
+      "Województwo": "lubelskie",
+      "Powiat": "kraśnicki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Gościeradów",
+      "miejscowość": "Gościeradów Ukazowy",
+      "telefon_z_numerem_kierunkowym": "+15 8381105"
+    },
+    {
+      "Kod_TERYT": "0607052",
+      "Województwo": "lubelskie",
+      "Powiat": "kraśnicki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Kraśnik",
+      "miejscowość": "Kraśnik",
+      "telefon_z_numerem_kierunkowym": "+81 8843427"
+    },
+    {
+      "Kod_TERYT": "0607062",
+      "Województwo": "lubelskie",
+      "Powiat": "kraśnicki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Szastarka",
+      "miejscowość": "Szastarka",
+      "telefon_z_numerem_kierunkowym": "+15 8714130"
+    },
+    {
+      "Kod_TERYT": "0607072",
+      "Województwo": "lubelskie",
+      "Powiat": "kraśnicki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Trzydnik Duży",
+      "miejscowość": "Trzydnik Duży",
+      "telefon_z_numerem_kierunkowym": "+15 8731879"
+    },
+    {
+      "Kod_TERYT": "0607092",
+      "Województwo": "lubelskie",
+      "Powiat": "kraśnicki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wilkołaz",
+      "miejscowość": "Wilkołaz",
+      "telefon_z_numerem_kierunkowym": "+81 8212001"
+    },
+    {
+      "Kod_TERYT": "0607102",
+      "Województwo": "lubelskie",
+      "Powiat": "kraśnicki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Zakrzówek",
+      "miejscowość": "Zakrzówek",
+      "telefon_z_numerem_kierunkowym": "+81 8215002"
+    },
+    {
+      "Kod_TERYT": "0608022",
+      "Województwo": "lubelskie",
+      "Powiat": "lubartowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Abramów",
+      "miejscowość": "Abramów",
+      "telefon_z_numerem_kierunkowym": "+81 8525001"
+    },
+    {
+      "Kod_TERYT": "0608032",
+      "Województwo": "lubelskie",
+      "Powiat": "lubartowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Firlej",
+      "miejscowość": "Firlej",
+      "telefon_z_numerem_kierunkowym": "+81 8575041"
+    },
+    {
+      "Kod_TERYT": "0608042",
+      "Województwo": "lubelskie",
+      "Powiat": "lubartowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Jeziorzany",
+      "miejscowość": "Jeziorzany",
+      "telefon_z_numerem_kierunkowym": "+81 8578001"
+    },
+    {
+      "Kod_TERYT": "0608072",
+      "Województwo": "lubelskie",
+      "Powiat": "lubartowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Lubartów",
+      "miejscowość": "Lubartów",
+      "telefon_z_numerem_kierunkowym": "+81 8553586"
+    },
+    {
+      "Kod_TERYT": "0608082",
+      "Województwo": "lubelskie",
+      "Powiat": "lubartowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Michów",
+      "miejscowość": "Michów",
+      "telefon_z_numerem_kierunkowym": "+81 8566001"
+    },
+    {
+      "Kod_TERYT": "0608092",
+      "Województwo": "lubelskie",
+      "Powiat": "lubartowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Niedźwiada",
+      "miejscowość": "Niedźwiada-Kolonia",
+      "telefon_z_numerem_kierunkowym": "+81 8512004"
+    },
+    {
+      "Kod_TERYT": "0608112",
+      "Województwo": "lubelskie",
+      "Powiat": "lubartowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Ostrówek",
+      "miejscowość": "Ostrówek-Kolonia",
+      "telefon_z_numerem_kierunkowym": "+81 8562002"
+    },
+    {
+      "Kod_TERYT": "0608122",
+      "Województwo": "lubelskie",
+      "Powiat": "lubartowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Serniki",
+      "miejscowość": "Serniki",
+      "telefon_z_numerem_kierunkowym": "+81 8550450"
+    },
+    {
+      "Kod_TERYT": "0608132",
+      "Województwo": "lubelskie",
+      "Powiat": "lubartowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Uścimów",
+      "miejscowość": "Uścimów",
+      "telefon_z_numerem_kierunkowym": "+81 8523045"
+    },
+    {
+      "Kod_TERYT": "0609022",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Borzechów",
+      "miejscowość": "Borzechów",
+      "telefon_z_numerem_kierunkowym": "+81 5111702"
+    },
+    {
+      "Kod_TERYT": "0609042",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Garbów",
+      "miejscowość": "Garbów",
+      "telefon_z_numerem_kierunkowym": "+81 5018063"
+    },
+    {
+      "Kod_TERYT": "0609052",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Głusk",
+      "miejscowość": "Dominów",
+      "telefon_z_numerem_kierunkowym": "+81 7518760"
+    },
+    {
+      "Kod_TERYT": "0609062",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Jabłonna",
+      "miejscowość": "Jabłonna",
+      "telefon_z_numerem_kierunkowym": "+81 5610570"
+    },
+    {
+      "Kod_TERYT": "0609072",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Jastków",
+      "miejscowość": "Panieńszczyzna",
+      "telefon_z_numerem_kierunkowym": "+81 5020425"
+    },
+    {
+      "Kod_TERYT": "0609082",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Konopnica",
+      "miejscowość": "Konopnica",
+      "telefon_z_numerem_kierunkowym": "+81 5031081"
+    },
+    {
+      "Kod_TERYT": "0609092",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Krzczonów",
+      "miejscowość": "Krzczonów",
+      "telefon_z_numerem_kierunkowym": "+81 5664051"
+    },
+    {
+      "Kod_TERYT": "0609102",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Niedrzwica Duża",
+      "miejscowość": "Niedrzwica Duża",
+      "telefon_z_numerem_kierunkowym": "+81 5175085"
+    },
+    {
+      "Kod_TERYT": "0609112",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Niemce",
+      "miejscowość": "Niemce",
+      "telefon_z_numerem_kierunkowym": "+81 7561521"
+    },
+    {
+      "Kod_TERYT": "0609122",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Strzyżewice",
+      "miejscowość": "Strzyżewice",
+      "telefon_z_numerem_kierunkowym": "+81 5666025"
+    },
+    {
+      "Kod_TERYT": "0609132",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wojciechów",
+      "miejscowość": "Wojciechów",
+      "telefon_z_numerem_kierunkowym": "+81 5177353"
+    },
+    {
+      "Kod_TERYT": "0609142",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wólka",
+      "miejscowość": "Jakubowice Murowane",
+      "telefon_z_numerem_kierunkowym": "+81 7464844"
+    },
+    {
+      "Kod_TERYT": "0609152",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wysokie",
+      "miejscowość": "Wysokie",
+      "telefon_z_numerem_kierunkowym": "+84 6806206"
+    },
+    {
+      "Kod_TERYT": "0609162",
+      "Województwo": "lubelskie",
+      "Powiat": "lubelski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Zakrzew",
+      "miejscowość": "Zakrzew",
+      "telefon_z_numerem_kierunkowym": "+84 6809700"
+    },
+    {
+      "Kod_TERYT": "0610012",
+      "Województwo": "lubelskie",
+      "Powiat": "łęczyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Cyców",
+      "miejscowość": "Cyców",
+      "telefon_z_numerem_kierunkowym": "+82 5677003"
+    },
+    {
+      "Kod_TERYT": "0610022",
+      "Województwo": "lubelskie",
+      "Powiat": "łęczyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Ludwin",
+      "miejscowość": "Ludwin",
+      "telefon_z_numerem_kierunkowym": "+81 7570901"
+    },
+    {
+      "Kod_TERYT": "0610042",
+      "Województwo": "lubelskie",
+      "Powiat": "łęczyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Milejów",
+      "miejscowość": "Milejów",
+      "telefon_z_numerem_kierunkowym": "+81 7572026"
+    },
+    {
+      "Kod_TERYT": "0610052",
+      "Województwo": "lubelskie",
+      "Powiat": "łęczyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Puchaczów",
+      "miejscowość": "Puchaczów",
+      "telefon_z_numerem_kierunkowym": "+81 7575012"
+    },
+    {
+      "Kod_TERYT": "0610062",
+      "Województwo": "lubelskie",
+      "Powiat": "łęczyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Spiczyn",
+      "miejscowość": "Spiczyn",
+      "telefon_z_numerem_kierunkowym": "+81 7577048"
+    },
+    {
+      "Kod_TERYT": "0611032",
+      "Województwo": "lubelskie",
+      "Powiat": "łukowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Adamów",
+      "miejscowość": "Adamów",
+      "telefon_z_numerem_kierunkowym": "+25 7553140"
+    },
+    {
+      "Kod_TERYT": "0611042",
+      "Województwo": "lubelskie",
+      "Powiat": "łukowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Krzywda",
+      "miejscowość": "Krzywda",
+      "telefon_z_numerem_kierunkowym": "+25 7551006"
+    },
+    {
+      "Kod_TERYT": "0611052",
+      "Województwo": "lubelskie",
+      "Powiat": "łukowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Łuków",
+      "miejscowość": "Łuków",
+      "telefon_z_numerem_kierunkowym": "+25 7982439"
+    },
+    {
+      "Kod_TERYT": "0611062",
+      "Województwo": "lubelskie",
+      "Powiat": "łukowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Serokomla",
+      "miejscowość": "Serokomla",
+      "telefon_z_numerem_kierunkowym": "+25 7554502"
+    },
+    {
+      "Kod_TERYT": "0611072",
+      "Województwo": "lubelskie",
+      "Powiat": "łukowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Stanin",
+      "miejscowość": "Stanin",
+      "telefon_z_numerem_kierunkowym": "+25 7981104"
+    },
+    {
+      "Kod_TERYT": "0611082",
+      "Województwo": "lubelskie",
+      "Powiat": "łukowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Stoczek Łukowski",
+      "miejscowość": "Stoczek Łukowski",
+      "telefon_z_numerem_kierunkowym": "+25 7970047"
+    },
+    {
+      "Kod_TERYT": "0611092",
+      "Województwo": "lubelskie",
+      "Powiat": "łukowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Trzebieszów",
+      "miejscowość": "Trzebieszów Drugi",
+      "telefon_z_numerem_kierunkowym": "+25 7960355"
+    },
+    {
+      "Kod_TERYT": "0611102",
+      "Województwo": "lubelskie",
+      "Powiat": "łukowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wojcieszków",
+      "miejscowość": "Wojcieszków",
+      "telefon_z_numerem_kierunkowym": "+25 7554101"
+    },
+    {
+      "Kod_TERYT": "0611112",
+      "Województwo": "lubelskie",
+      "Powiat": "łukowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wola Mysłowska",
+      "miejscowość": "Wola Mysłowska",
+      "telefon_z_numerem_kierunkowym": "+25 7542522"
+    },
+    {
+      "Kod_TERYT": "0612012",
+      "Województwo": "lubelskie",
+      "Powiat": "opolski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Chodel",
+      "miejscowość": "Chodel",
+      "telefon_z_numerem_kierunkowym": "+81 8277310"
+    },
+    {
+      "Kod_TERYT": "0612032",
+      "Województwo": "lubelskie",
+      "Powiat": "opolski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Karczmiska",
+      "miejscowość": "Karczmiska",
+      "telefon_z_numerem_kierunkowym": "+81 8287026"
+    },
+    {
+      "Kod_TERYT": "0612042",
+      "Województwo": "lubelskie",
+      "Powiat": "opolski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Łaziska",
+      "miejscowość": "Łaziska",
+      "telefon_z_numerem_kierunkowym": "+81 8276920"
+    },
+    {
+      "Kod_TERYT": "0612072",
+      "Województwo": "lubelskie",
+      "Powiat": "opolski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wilków",
+      "miejscowość": "Wilków",
+      "telefon_z_numerem_kierunkowym": "+81 8281002"
+    },
+    {
+      "Kod_TERYT": "0613012",
+      "Województwo": "lubelskie",
+      "Powiat": "parczewski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Dębowa Kłoda",
+      "miejscowość": "Dębowa Kłoda",
+      "telefon_z_numerem_kierunkowym": "+83 3557008"
+    },
+    {
+      "Kod_TERYT": "0613022",
+      "Województwo": "lubelskie",
+      "Powiat": "parczewski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Jabłoń",
+      "miejscowość": "Jabłoń",
+      "telefon_z_numerem_kierunkowym": "+83 3560006"
+    },
+    {
+      "Kod_TERYT": "0613032",
+      "Województwo": "lubelskie",
+      "Powiat": "parczewski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Milanów",
+      "miejscowość": "Milanów",
+      "telefon_z_numerem_kierunkowym": "+83 3567002"
+    },
+    {
+      "Kod_TERYT": "0613052",
+      "Województwo": "lubelskie",
+      "Powiat": "parczewski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Podedwórze",
+      "miejscowość": "Podedwórze",
+      "telefon_z_numerem_kierunkowym": "+83 3795011"
+    },
+    {
+      "Kod_TERYT": "0613062",
+      "Województwo": "lubelskie",
+      "Powiat": "parczewski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Siemień",
+      "miejscowość": "Siemień",
+      "telefon_z_numerem_kierunkowym": "+83 3547001"
+    },
+    {
+      "Kod_TERYT": "0613072",
+      "Województwo": "lubelskie",
+      "Powiat": "parczewski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Sosnowica",
+      "miejscowość": "Sosnowica",
+      "telefon_z_numerem_kierunkowym": "+82 5912152"
+    },
+    {
+      "Kod_TERYT": "0614022",
+      "Województwo": "lubelskie",
+      "Powiat": "puławski ",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Baranów",
+      "miejscowość": "Baranów",
+      "telefon_z_numerem_kierunkowym": "+81 8834027"
+    },
+    {
+      "Kod_TERYT": "0614032",
+      "Województwo": "lubelskie",
+      "Powiat": "puławski ",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Janowiec",
+      "miejscowość": "Janowiec",
+      "telefon_z_numerem_kierunkowym": "+81 8815800"
+    },
+    {
+      "Kod_TERYT": "0614052",
+      "Województwo": "lubelskie",
+      "Powiat": "puławski ",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Końskowola",
+      "miejscowość": "Końskowola",
+      "telefon_z_numerem_kierunkowym": "+81 8816201"
+    },
+    {
+      "Kod_TERYT": "0614062",
+      "Województwo": "lubelskie",
+      "Powiat": "puławski ",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Kurów",
+      "miejscowość": "Kurów",
+      "telefon_z_numerem_kierunkowym": "+81 8811151"
+    },
+    {
+      "Kod_TERYT": "0614072",
+      "Województwo": "lubelskie",
+      "Powiat": "puławski ",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Markuszów",
+      "miejscowość": "Markuszów",
+      "telefon_z_numerem_kierunkowym": "+81 8818070"
+    },
+    {
+      "Kod_TERYT": "0614092",
+      "Województwo": "lubelskie",
+      "Powiat": "puławski ",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Puławy",
+      "miejscowość": "Puławy",
+      "telefon_z_numerem_kierunkowym": "+81 8874121"
+    },
+    {
+      "Kod_TERYT": "0614102",
+      "Województwo": "lubelskie",
+      "Powiat": "puławski ",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wąwolnica",
+      "miejscowość": "Wąwolnica",
+      "telefon_z_numerem_kierunkowym": "+81 8825072"
+    },
+    {
+      "Kod_TERYT": "0614112",
+      "Województwo": "lubelskie",
+      "Powiat": "puławski ",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Żyrzyn",
+      "miejscowość": "Żyrzyn",
+      "telefon_z_numerem_kierunkowym": "+81 8814226"
+    },
+    {
+      "Kod_TERYT": "0615022",
+      "Województwo": "lubelskie",
+      "Powiat": "radzyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Borki",
+      "miejscowość": "Borki",
+      "telefon_z_numerem_kierunkowym": "+81 8574208"
+    },
+    {
+      "Kod_TERYT": "0615032",
+      "Województwo": "lubelskie",
+      "Powiat": "radzyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Czemierniki",
+      "miejscowość": "Czemierniki",
+      "telefon_z_numerem_kierunkowym": "+83 3513003"
+    },
+    {
+      "Kod_TERYT": "0615042",
+      "Województwo": "lubelskie",
+      "Powiat": "radzyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Kąkolewnica",
+      "miejscowość": "Kąkolewnica",
+      "telefon_z_numerem_kierunkowym": "+83 3722010"
+    },
+    {
+      "Kod_TERYT": "0615052",
+      "Województwo": "lubelskie",
+      "Powiat": "radzyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Komarówka Podlaska",
+      "miejscowość": "Komarówka Podlaska",
+      "telefon_z_numerem_kierunkowym": "+83 3535004"
+    },
+    {
+      "Kod_TERYT": "0615062",
+      "Województwo": "lubelskie",
+      "Powiat": "radzyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Radzyń Podlaski",
+      "miejscowość": "Radzyń Podlaski",
+      "telefon_z_numerem_kierunkowym": "+83 4131800"
+    },
+    {
+      "Kod_TERYT": "0615072",
+      "Województwo": "lubelskie",
+      "Powiat": "radzyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Ulan-Majorat",
+      "miejscowość": "Ulan-Majorat",
+      "telefon_z_numerem_kierunkowym": "+83 3518069"
+    },
+    {
+      "Kod_TERYT": "0615082",
+      "Województwo": "lubelskie",
+      "Powiat": "radzyński",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wohyń",
+      "miejscowość": "Wohyń",
+      "telefon_z_numerem_kierunkowym": "+83 3530003"
+    },
+    {
+      "Kod_TERYT": "0616022",
+      "Województwo": "lubelskie",
+      "Powiat": "rycki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Kłoczew",
+      "miejscowość": "Kłoczew",
+      "telefon_z_numerem_kierunkowym": "+25 7543199"
+    },
+    {
+      "Kod_TERYT": "0616032",
+      "Województwo": "lubelskie",
+      "Powiat": "rycki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Nowodwór",
+      "miejscowość": "Nowodwór",
+      "telefon_z_numerem_kierunkowym": "+81 8661018"
+    },
+    {
+      "Kod_TERYT": "0616052",
+      "Województwo": "lubelskie",
+      "Powiat": "rycki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Stężyca",
+      "miejscowość": "Stężyca",
+      "telefon_z_numerem_kierunkowym": "+81 8663038"
+    },
+    {
+      "Kod_TERYT": "0616062",
+      "Województwo": "lubelskie",
+      "Powiat": "rycki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Ułęż",
+      "miejscowość": "Ułęż",
+      "telefon_z_numerem_kierunkowym": "+81 8667004"
+    },
+    {
+      "Kod_TERYT": "0617022",
+      "Województwo": "lubelskie",
+      "Powiat": "świdnicki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Mełgiew",
+      "miejscowość": "Mełgiew",
+      "telefon_z_numerem_kierunkowym": "+81 7597700"
+    },
+    {
+      "Kod_TERYT": "0617042",
+      "Województwo": "lubelskie",
+      "Powiat": "świdnicki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Rybczewice",
+      "miejscowość": "Rybczewice Drugie",
+      "telefon_z_numerem_kierunkowym": "+81 5844460"
+    },
+    {
+      "Kod_TERYT": "0617052",
+      "Województwo": "lubelskie",
+      "Powiat": "świdnicki",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Trawniki",
+      "miejscowość": "Trawniki",
+      "telefon_z_numerem_kierunkowym": "+81 5856018"
+    },
+    {
+      "Kod_TERYT": "0618022",
+      "Województwo": "lubelskie",
+      "Powiat": "tomaszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Bełżec",
+      "miejscowość": "Bełżec",
+      "telefon_z_numerem_kierunkowym": "+84 6652182"
+    },
+    {
+      "Kod_TERYT": "0618032",
+      "Województwo": "lubelskie",
+      "Powiat": "tomaszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Jarczów",
+      "miejscowość": "Jarczów",
+      "telefon_z_numerem_kierunkowym": "+84 6634522"
+    },
+    {
+      "Kod_TERYT": "0618042",
+      "Województwo": "lubelskie",
+      "Powiat": "tomaszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Krynice",
+      "miejscowość": "Krynice",
+      "telefon_z_numerem_kierunkowym": "+84 6630225"
+    },
+    {
+      "Kod_TERYT": "0618072",
+      "Województwo": "lubelskie",
+      "Powiat": "tomaszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Rachanie",
+      "miejscowość": "Rachanie",
+      "telefon_z_numerem_kierunkowym": "+84 6471103"
+    },
+    {
+      "Kod_TERYT": "0618082",
+      "Województwo": "lubelskie",
+      "Powiat": "tomaszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Susiec",
+      "miejscowość": "Susiec",
+      "telefon_z_numerem_kierunkowym": "+84 6654893"
+    },
+    {
+      "Kod_TERYT": "0618092",
+      "Województwo": "lubelskie",
+      "Powiat": "tomaszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Tarnawatka",
+      "miejscowość": "Tarnawatka",
+      "telefon_z_numerem_kierunkowym": "+84 6624710"
+    },
+    {
+      "Kod_TERYT": "0618102",
+      "Województwo": "lubelskie",
+      "Powiat": "tomaszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Telatyn",
+      "miejscowość": "Telatyn",
+      "telefon_z_numerem_kierunkowym": "+84 6613110"
+    },
+    {
+      "Kod_TERYT": "0618112",
+      "Województwo": "lubelskie",
+      "Powiat": "tomaszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Tomaszów Lubelski",
+      "miejscowość": "Tomaszów Lubelski",
+      "telefon_z_numerem_kierunkowym": "+84 6643085"
+    },
+    {
+      "Kod_TERYT": "0618132",
+      "Województwo": "lubelskie",
+      "Powiat": "tomaszowski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Ulhówek",
+      "miejscowość": "Ulhówek",
+      "telefon_z_numerem_kierunkowym": "+84 6616004"
+    },
+    {
+      "Kod_TERYT": "0619022",
+      "Województwo": "lubelskie",
+      "Powiat": "włodawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Hanna",
+      "miejscowość": "Hanna",
+      "telefon_z_numerem_kierunkowym": "+83 3798016"
+    },
+    {
+      "Kod_TERYT": "0619032",
+      "Województwo": "lubelskie",
+      "Powiat": "włodawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Hańsk",
+      "miejscowość": "Hańsk",
+      "telefon_z_numerem_kierunkowym": "+82 5714028"
+    },
+    {
+      "Kod_TERYT": "0619042",
+      "Województwo": "lubelskie",
+      "Powiat": "włodawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Stary Brus",
+      "miejscowość": "Stary Brus",
+      "telefon_z_numerem_kierunkowym": "+82 5710125"
+    },
+    {
+      "Kod_TERYT": "0619052",
+      "Województwo": "lubelskie",
+      "Powiat": "włodawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Urszulin",
+      "miejscowość": "Urszulin",
+      "telefon_z_numerem_kierunkowym": "+82 5713024"
+    },
+    {
+      "Kod_TERYT": "0619062",
+      "Województwo": "lubelskie",
+      "Powiat": "włodawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Włodawa",
+      "miejscowość": "Włodawa",
+      "telefon_z_numerem_kierunkowym": "+82 5721234"
+    },
+    {
+      "Kod_TERYT": "0619072",
+      "Województwo": "lubelskie",
+      "Powiat": "włodawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wola Uhruska",
+      "miejscowość": "Wola Uhruska",
+      "telefon_z_numerem_kierunkowym": "+82 5915003"
+    },
+    {
+      "Kod_TERYT": "0619082",
+      "Województwo": "lubelskie",
+      "Powiat": "włodawski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Wyryki",
+      "miejscowość": "Wyryki",
+      "telefon_z_numerem_kierunkowym": "+82 5913003"
+    },
+    {
+      "Kod_TERYT": "0620012",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Adamów",
+      "miejscowość": "Adamów",
+      "telefon_z_numerem_kierunkowym": "+84 6186102"
+    },
+    {
+      "Kod_TERYT": "0620022",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Grabowiec",
+      "miejscowość": "Grabowiec",
+      "telefon_z_numerem_kierunkowym": "+84 6512474"
+    },
+    {
+      "Kod_TERYT": "0620032",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Komarów-Osada",
+      "miejscowość": "Komarów-Osada",
+      "telefon_z_numerem_kierunkowym": "+84 6153102"
+    },
+    {
+      "Kod_TERYT": "0620052",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Łabunie",
+      "miejscowość": "Łabunie",
+      "telefon_z_numerem_kierunkowym": "+84 6113019"
+    },
+    {
+      "Kod_TERYT": "0620062",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Miączyn",
+      "miejscowość": "Miączyn",
+      "telefon_z_numerem_kierunkowym": "+84 6180005"
+    },
+    {
+      "Kod_TERYT": "0620072",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Nielisz",
+      "miejscowość": "Nielisz",
+      "telefon_z_numerem_kierunkowym": "+84 6312727"
+    },
+    {
+      "Kod_TERYT": "0620082",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Radecznica",
+      "miejscowość": "Radecznica",
+      "telefon_z_numerem_kierunkowym": "+84 6818001"
+    },
+    {
+      "Kod_TERYT": "0620092",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Sitno",
+      "miejscowość": "Sitno",
+      "telefon_z_numerem_kierunkowym": "+84 6113940"
+    },
+    {
+      "Kod_TERYT": "0620102",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Skierbieszów",
+      "miejscowość": "Skierbieszów",
+      "telefon_z_numerem_kierunkowym": "+84 6213670"
+    },
+    {
+      "Kod_TERYT": "0620112",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Stary Zamość",
+      "miejscowość": "Stary Zamość",
+      "telefon_z_numerem_kierunkowym": "+84 6164231"
+    },
+    {
+      "Kod_TERYT": "0620122",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Sułów",
+      "miejscowość": "Sułów",
+      "telefon_z_numerem_kierunkowym": "+84 6826202"
+    },
+    {
+      "Kod_TERYT": "0620142",
+      "Województwo": "lubelskie",
+      "Powiat": "zamojski",
+      "typ_JST": "GW",
+      "nazwa_urzędu_JST": "Urząd Gminy Zamość",
+      "miejscowość": "Zamość",
+      "telefon_z_numerem_kierunkowym": "+84 6392959"
+    }
+  ]
+}
