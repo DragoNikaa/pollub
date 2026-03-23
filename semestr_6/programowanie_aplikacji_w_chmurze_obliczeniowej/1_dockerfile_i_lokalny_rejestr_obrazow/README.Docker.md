@@ -42,7 +42,7 @@ Uruchomienie kontenera na bazie opracowanego obrazu (np. z przekierowaniem portu
 ```
 docker run -d -p 8080:80 web100
 ```
-Strona WWW będzie dostępna pod adresem:
+Strona WWW będzie dostępna pod adresem:<br>
 [http://localhost:8080](http://localhost:8080)
 
 ## Przesłanie obrazu do repozytorium na Docker Hub
@@ -54,7 +54,7 @@ Przesłanie obrazu do repozytorium:
 ```
 docker push dragonika/web100:1.0.0
 ```
-Obraz jest dostępny w repozytorium pod adresem:
+Obraz jest dostępny w repozytorium pod adresem:<br>
 [https://hub.docker.com/repository/docker/dragonika/web100](https://hub.docker.com/repository/docker/dragonika/web100)
 
 ## Konfiguracja i uruchomienie lokalnego rejestru obrazów
@@ -86,11 +86,13 @@ docker run -d \
 	-p 443:443 registry:2
 ```
 Dodanie certyfikatu do zaufanych głównych urzędów certyfikacji w systemie Windows:
+
 ![instalacja certyfikatu – krok 1](images/certificate_installation_1.png)
 ![instalacja certyfikatu – krok 2](images/certificate_installation_2.png)
 ![instalacja certyfikatu – krok 3](images/certificate_installation_3.png)
 
 Weryfikacja certyfikatu w przeglądarce:
+
 ![weryfikacja certyfikatu – krok 1](images/certificate_verification_1.png)
 ![weryfikacja certyfikatu – krok 2](images/certificate_verification_2.png)
 
