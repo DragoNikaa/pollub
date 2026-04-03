@@ -31,7 +31,7 @@ public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.GradeViewHol
     public void onBindViewHolder(@NonNull GradeViewHolder holder, int position) {
         Grade grade = grades.get(position);
         holder.binding.textSubject.setText(grade.getSubject());
-        checkRadio(holder, grade.getValue());
+        checkRadio(holder.binding, grade.getValue());
     }
 
     @Override
@@ -39,10 +39,7 @@ public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.GradeViewHol
         return grades.size();
     }
 
-    private void checkRadio(@NonNull GradeViewHolder holder, double gradeValue) {
-        GradeRowBinding binding = holder.binding;
-        binding.radioGrades.setOnCheckedChangeListener(null);
-
+    private void checkRadio(@NonNull GradeRowBinding binding, double gradeValue) {
         if (gradeValue == 2) binding.radioGrade2.setChecked(true);
         else if (gradeValue == 3) binding.radioGrade3.setChecked(true);
         else if (gradeValue == 3.5) binding.radioGrade35.setChecked(true);
@@ -50,8 +47,6 @@ public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.GradeViewHol
         else if (gradeValue == 4.5) binding.radioGrade45.setChecked(true);
         else if (gradeValue == 5) binding.radioGrade5.setChecked(true);
         else binding.radioGrades.clearCheck();
-
-        binding.radioGrades.setOnCheckedChangeListener(holder);
     }
 
     public class GradeViewHolder extends RecyclerView.ViewHolder implements RadioGroup.OnCheckedChangeListener {
@@ -60,13 +55,17 @@ public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.GradeViewHol
         public GradeViewHolder(GradeRowBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
+            binding.radioGrades.setOnCheckedChangeListener(this);
         }
 
         @Override
         public void onCheckedChanged(@NonNull RadioGroup group, int checkedId) {
-            if (checkedId == -1) return;
-            double gradeValue = Double.parseDouble(group.findViewById(checkedId).getTag().toString());
-            grades.get(getBindingAdapterPosition()).setValue(gradeValue);
+            Grade grade = grades.get(getBindingAdapterPosition());
+            if (checkedId == -1) grade.setDefaultValue();
+            else {
+                double gradeValue = Double.parseDouble(group.findViewById(checkedId).getTag().toString());
+                grade.setValue(gradeValue);
+            }
         }
     }
 }
