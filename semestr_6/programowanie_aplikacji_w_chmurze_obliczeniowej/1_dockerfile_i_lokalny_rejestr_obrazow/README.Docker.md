@@ -36,7 +36,7 @@ docker inspect web100 | jq ".[].RootFS"
 }
 ```
 Na podstawie powyższych informacji można stwierdzić, że utworzony obraz posiada **3 warstwy** (są to tylko te z niezerową wielkością).
-
+<br><br>
 ## Uruchomienie kontenera
 Uruchomienie kontenera na bazie opracowanego obrazu (np. z przekierowaniem portu 8080):
 ```
@@ -44,7 +44,7 @@ docker run -d -p 8080:80 web100
 ```
 Strona WWW będzie dostępna pod adresem:<br>
 [http://localhost:8080](http://localhost:8080)
-
+<br><br>
 ## Przesłanie obrazu do repozytorium na Docker Hub
 Otagowanie obrazu zgodnie z konwencją [SemVer](https://semver.org/):
 ```
@@ -56,7 +56,7 @@ docker push dragonika/web100:1.0.0
 ```
 Obraz jest dostępny w repozytorium pod adresem:<br>
 [https://hub.docker.com/repository/docker/dragonika/web100](https://hub.docker.com/repository/docker/dragonika/web100)
-
+<br><br>
 ## Konfiguracja i uruchomienie lokalnego rejestru obrazów
 Wygenerowanie samodzielnie podpisanego certyfikatu (w ramach ćwiczeń dla domeny *localhost*):
 ```
@@ -111,7 +111,7 @@ curl -X GET https://localhost:443/v2/_catalog
 {"repositories":[]}
 ```
 Powyższe wyniki potwierdzają, że rejestr działa wyłącznie w trybie szyfrowanym (TLS). Serwer odrzuca połączenia nieszyfrowane, co jest pożądanym zachowaniem z punktu widzenia bezpiecznego dostępu do jego zasobów.
-
+<br><br>
 ## Wykorzystanie lokalnego rejestru obrazów
 Otagowanie obrazu w celu przesłania go do lokalnego rejestru:
 ```
