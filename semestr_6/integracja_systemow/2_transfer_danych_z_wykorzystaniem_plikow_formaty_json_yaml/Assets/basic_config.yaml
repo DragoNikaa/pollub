@@ -1,0 +1,28 @@
+paths:
+  source_folder: Assets/
+  json_source_file: data.json
+  json_modified_file: data_modified.json
+  json_to_yaml_file: data_from_json.yaml
+  json_to_xml_file: data_from_json.xml
+  xml_to_json_file: data_from_xml.json
+
+settings:
+  convert_source: object  # object | file
+
+  enabled_operations:
+    deserialize_json: true
+    serialize_json: true
+    convert_json_to_yaml: true
+    convert_json_to_xml: true
+    convert_xml_to_json: true
+    display_overview_json: true
+    display_overview_xml: true
+
+  operations_order:
+    - deserialize_json
+    - display_overview_json
+    - serialize_json
+    - convert_json_to_yaml
+    - convert_json_to_xml
+    - convert_xml_to_json
+    - display_overview_xml

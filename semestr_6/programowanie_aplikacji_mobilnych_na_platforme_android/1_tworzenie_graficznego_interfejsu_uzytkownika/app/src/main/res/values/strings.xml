@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">1_tworzenie_graficznego_interfejsu_uzytkownika</string>
+
+    <string name="main_toolbar_title">Student info</string>
+    <string name="grades_toolbar_title">Grades</string>
+
+    <string name="first_name_label">First name:</string>
+    <string name="first_name_hint">Enter first name</string>
+    <string name="first_name_error_required">First name is required</string>
+    <string name="first_name_error_invalid">Please enter a valid first name</string>
+
+    <string name="last_name_label">Last name:</string>
+    <string name="last_name_hint">Enter last name</string>
+    <string name="last_name_error_required">Last name is required</string>
+    <string name="last_name_error_invalid">Please enter a valid last name</string>
+
+    <string name="grade_number_label">Number of grades:</string>
+    <string name="grade_number_hint">Enter number of grades (5–15)</string>
+    <string name="grade_number_error_required">Number of grades is required</string>
+    <string name="grade_number_error_invalid">Number of grades must be between 5 and 15</string>
+
+    <string name="grades_button">Grades</string>
+
+    <string name="subject_placeholder">Subject placeholder</string>
+    <string-array name="subjects">
+        <item>Object-Oriented Programming</item>
+        <item>Algorithms and Data Structures</item>
+        <item>Computer Networks</item>
+        <item>Database Systems</item>
+        <item>Numerical Analysis Algorithms</item>
+        <item>Microprocessor Technology</item>
+        <item>Computer Graphics</item>
+        <item>Programming Paradigms</item>
+        <item>Web Applications</item>
+        <item>Information Security</item>
+        <item>Software Engineering</item>
+        <item>Embedded Systems</item>
+        <item>Artificial Intelligence</item>
+        <item>Mobile Applications</item>
+        <item>Cloud Computing Applications</item>
+    </string-array>
+
+    <string name="grade_2">2</string>
+    <string name="grade_3">3</string>
+    <string name="grade_3.5">3.5</string>
+    <string name="grade_4">4</string>
+    <string name="grade_4.5">4.5</string>
+    <string name="grade_5">5</string>
+
+    <string name="grades_error_required">All grades must be selected</string>
+
+    <string name="average_button">Calculate average</string>
+
+    <string name="average_result_label">Your average is: %1$.2f</string>
+
+    <string name="average_result_success_label">Great job!</string>
+    <string name="average_result_fail_label">Oops… not this time</string>
+
+    <string name="average_result_success_toast">Congrats! You passed! 🎉</string>
+    <string name="average_result_fail_toast">Sending a \'let me pass anyway\' request</string>
+</resources>
