@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'freepik' => [
+        'key' => env('FREEPIK_API_KEY'),
+        'api_url' => env('FREEPIK_API_URL'),
+        'webhook_url' => env('FREEPIK_WEBHOOK_URL'),
+    ],
+
 ];
