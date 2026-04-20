@@ -9,14 +9,15 @@ ADD alpine-minirootfs-3.23.3-x86_64.tar /
 # Ustawienie katalogu roboczego.
 WORKDIR /usr/app
 
-# Skopiowanie skryptu budującego aplikację webową do wewnątrz obrazu.
-COPY build_webapp.sh .
+# Skopiowanie aplikacji webowej (Spring Boot) do wewnątrz obrazu.
+COPY web .
 
-# Nadanie skryptowi uprawnień do wykonywania. 
-RUN chmod +x build_webapp.sh
+# Zainstalowanie niezbędnych pakietów oraz zbudowanie powyższej aplikacji.
+RUN apk add --no-cache openjdk17 gradle && \
+	gradle clean bootJar
 
-# Drugi etap budowy – wykorzystanie obrazu bazowego nginx w wersji 1.29.7 (zawierającego pakiet curl).
-FROM nginx:1.29.7
+# Drugi etap budowy – wykorzystanie obrazu bazowego nginx w wersji 1.29.8 Alpine (zawierającego pakiet curl).
+FROM nginx:1.29.8-alpine
 
 # Dodanie metadanych informujących o autorze obrazu.
 LABEL org.opencontainers.image.authors="Julia Jurczak <s101581@pollub.edu.pl>"
@@ -30,8 +31,18 @@ ENV VERSION=${VERSION:-1.0.0}
 # Ustawienie katalogu roboczego.
 WORKDIR /usr/app
 
-# Skopiowanie skryptu budującego aplikację z pierwszego etapu.
-COPY --from=build /usr/app/build_webapp.sh .
+# Skopiowanie skryptu startowego do wewnątrz obrazu.
+COPY entrypoint.sh .
+
+# Skopiowanie pliku z konfiguracją serwera nginx (reverse proxy do aplikacji Spring Boot).
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Skopiowanie aplikacji zbudowanej w pierwszym etapie.
+COPY --from=build /usr/app/build/libs/*.jar webapp.jar
+
+# Zainstalowanie pakietu niezbędnego do uruchomienia aplikacji oraz nadanie skryptowi uprawnień do wykonywania.
+RUN apk add --no-cache openjdk17-jre && \
+	chmod +x entrypoint.sh
 
 # Wskazanie portu, na którym nasłuchuje kontener.
 EXPOSE 80
@@ -40,9 +51,8 @@ EXPOSE 80
 HEALTHCHECK --interval=10s --timeout=1s \
 	CMD curl -f http://localhost:80/ || exit 1
 
-# Uruchomienie powłoki w celu:
-# 1) wykonania skryptu z parametrem określającym lokalizację pliku wynikowego,
-# 2) uruchomienia nginx w trybie pierwszoplanowym, aby kontener nie wyłączył się zaraz po starcie.
-# Skrypt jest wykonywany w instrukcji CMD, aby pobrać aktualny adres IP i nazwę serwera w momencie uruchomienia kontenera.
-# Wykonanie w instrukcji RUN spowodowałoby zapisanie danych z etapu budowy obrazu (nieodzwierciedlających stanu działającego kontenera).
-CMD ["/bin/sh", "-c", "./build_webapp.sh '/usr/share/nginx/html/index.html' && nginx -g 'daemon off;'"]
+# Wykonanie skryptu uruchamiającego:
+# 1) aplikację Spring Boot w tle,
+# 2) serwer nginx w trybie pierwszoplanowym jako proces główny PID 1 (domyślne polecenie przekazane do ENTRYPOINT za pomocą CMD).
+ENTRYPOINT ["./entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
