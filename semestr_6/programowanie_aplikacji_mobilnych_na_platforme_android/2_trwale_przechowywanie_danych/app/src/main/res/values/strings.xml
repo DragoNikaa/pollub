@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">2_trwale_przechowywanie_danych</string>
+
+    <string name="main_toolbar_title">Phone DB</string>
+
+    <string name="clear_menu_option">Clear all data</string>
+    <string name="clear_toast">Clearing the data…</string>
+
+    <string name="manufacturer_placeholder">Manufacturer placeholder</string>
+    <string name="model_placeholder">Model placeholder</string>
+</resources>
