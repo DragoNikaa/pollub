@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._2_trwale_przechowywanie_danych">
         <activity
+            android:name=".AddPhoneActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

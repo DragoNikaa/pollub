@@ -15,14 +15,13 @@ public class Phone {
     @NonNull
     private String model;
 
-    @NonNull
-    private String androidVersion;
+    private int androidVersion;
 
     @NonNull
     private String website;
 
     public Phone(@NonNull String manufacturer, @NonNull String model,
-                 @NonNull String androidVersion, @NonNull String website) {
+                 int androidVersion, @NonNull String website) {
         this.manufacturer = manufacturer;
         this.model = model;
         this.androidVersion = androidVersion;
@@ -55,12 +54,11 @@ public class Phone {
         this.model = model;
     }
 
-    @NonNull
-    public String getAndroidVersion() {
+    public int getAndroidVersion() {
         return androidVersion;
     }
 
-    public void setAndroidVersion(@NonNull String androidVersion) {
+    public void setAndroidVersion(int androidVersion) {
         this.androidVersion = androidVersion;
     }
 
