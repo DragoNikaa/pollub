@@ -2,6 +2,7 @@ package com.example.a2_trwale_przechowywanie_danych;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -13,10 +14,16 @@ import java.util.List;
 
 public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.PhoneViewHolder> {
     private final LayoutInflater layoutInflater;
+    private final OnItemClickListener onItemClickListener;
     private List<Phone> phones;
 
-    public PhoneAdapter(Context context) {
+    interface OnItemClickListener {
+        void onItemClickListener(Phone phone);
+    }
+
+    public PhoneAdapter(Context context, OnItemClickListener onItemClickListener) {
         layoutInflater = LayoutInflater.from(context);
+        this.onItemClickListener = onItemClickListener;
         phones = null;
     }
 
@@ -42,16 +49,27 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.PhoneViewHol
         notifyDataSetChanged();
     }
 
-    public class PhoneViewHolder extends RecyclerView.ViewHolder {
+    public Phone getPhoneAt(int position) {
+        return phones.get(position);
+    }
+
+    public class PhoneViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public PhoneRowBinding binding;
 
-        public PhoneViewHolder(PhoneRowBinding binding) {
+        public PhoneViewHolder(@NonNull PhoneRowBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            Phone phone = getPhoneAt(getBindingAdapterPosition());
+            onItemClickListener.onItemClickListener(phone);
         }
 
         public void bindToPhoneViewHolder(int position) {
-            Phone phone = phones.get(position);
+            Phone phone = getPhoneAt(position);
             binding.textManufacturer.setText(phone.getManufacturer());
             binding.textModel.setText(phone.getModel());
         }

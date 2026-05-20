@@ -11,7 +11,9 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.a2_trwale_przechowywanie_danych.databinding.ActivityMainBinding;
 
@@ -19,7 +21,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     private PhoneAdapter phoneAdapter;
     private PhoneViewModel phoneViewModel;
 
-    private ActivityResultLauncher<Intent> addPhoneActivityResultLauncher;
+    private ActivityResultLauncher<Intent> addEditPhoneActivityResultLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +29,11 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         super.onCreate(savedInstanceState);
 
         setupToolbar();
+        setupAddEditPhoneActivityResultLauncher();
+        setupAddPhoneFab();
         setupPhoneAdapter();
         setupPhoneViewModel();
-        setupAddPhoneActivityResultLauncher();
-        setupAddPhoneFab();
+        setupItemTouchHelper();
     }
 
     @Override
@@ -55,10 +58,61 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         setSupportActionBar(binding.toolbar);
     }
 
+    private void setupAddEditPhoneActivityResultLauncher() {
+        addEditPhoneActivityResultLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                this::onAddEditPhoneActivityResult
+        );
+    }
+
+    private void onAddEditPhoneActivityResult(ActivityResult result) {
+        Intent data = result.getData();
+        if (result.getResultCode() != RESULT_OK || data == null) return;
+
+        long phoneId = data.getLongExtra(AddEditPhoneActivity.PHONE_ID_KEY, -1);
+        Phone phone = extractPhone(data, phoneId == -1 ? null : phoneId);
+        if (phone == null) return;
+
+        if (phoneId == -1) phoneViewModel.insert(phone);
+        else phoneViewModel.update(phone);
+    }
+
+    private Phone extractPhone(Intent data, Long id) {
+        String manufacturer = data.getStringExtra(AddEditPhoneActivity.MANUFACTURER_KEY);
+        String model = data.getStringExtra(AddEditPhoneActivity.MODEL_KEY);
+        int androidVersion = data.getIntExtra(AddEditPhoneActivity.ANDROID_VERSION_KEY, 0);
+        String website = data.getStringExtra(AddEditPhoneActivity.WEBSITE_KEY);
+
+        if (manufacturer == null || model == null || androidVersion == 0 || website == null) {
+            return null;
+        }
+        return id == null
+                ? new Phone(manufacturer, model, androidVersion, website)
+                : new Phone(id, manufacturer, model, androidVersion, website);
+    }
+
+    private void setupAddPhoneFab() {
+        binding.fabAddPhone.setOnClickListener(v -> {
+            Intent intent = new Intent(this, AddEditPhoneActivity.class);
+            addEditPhoneActivityResultLauncher.launch(intent);
+        });
+    }
+
     private void setupPhoneAdapter() {
-        phoneAdapter = new PhoneAdapter(this);
+        phoneAdapter = new PhoneAdapter(
+                this, phone -> addEditPhoneActivityResultLauncher.launch(createEditIntent(phone))
+        );
         binding.recyclerPhones.setAdapter(phoneAdapter);
         binding.recyclerPhones.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    private Intent createEditIntent(Phone phone) {
+        return new Intent(this, AddEditPhoneActivity.class)
+                .putExtra(AddEditPhoneActivity.PHONE_ID_KEY, phone.getId())
+                .putExtra(AddEditPhoneActivity.MANUFACTURER_KEY, phone.getManufacturer())
+                .putExtra(AddEditPhoneActivity.MODEL_KEY, phone.getModel())
+                .putExtra(AddEditPhoneActivity.ANDROID_VERSION_KEY, phone.getAndroidVersion())
+                .putExtra(AddEditPhoneActivity.WEBSITE_KEY, phone.getWebsite());
     }
 
     private void setupPhoneViewModel() {
@@ -66,35 +120,22 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         phoneViewModel.getAll().observe(this, phones -> phoneAdapter.set(phones));
     }
 
-    private void setupAddPhoneActivityResultLauncher() {
-        addPhoneActivityResultLauncher =
-                registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), this::onAddPhoneActivityResult);
-    }
+    private void setupItemTouchHelper() {
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(
+                new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+                    @Override
+                    public boolean onMove(@NonNull RecyclerView recyclerView,
+                                          @NonNull RecyclerView.ViewHolder viewHolder,
+                                          @NonNull RecyclerView.ViewHolder target) {
+                        return false;
+                    }
 
-    private void setupAddPhoneFab() {
-        binding.fabAddPhone.setOnClickListener(v -> {
-            Intent intent = new Intent(this, AddPhoneActivity.class);
-            addPhoneActivityResultLauncher.launch(intent);
-        });
-    }
-
-    private void onAddPhoneActivityResult(ActivityResult result) {
-        Intent data = result.getData();
-        if (result.getResultCode() != RESULT_OK || data == null) return;
-
-        Phone phone = extractPhone(data);
-        if (phone != null) phoneViewModel.insert(phone);
-    }
-
-    private Phone extractPhone(Intent data) {
-        String manufacturer = data.getStringExtra(AddPhoneActivity.MANUFACTURER_KEY);
-        String model = data.getStringExtra(AddPhoneActivity.MODEL_KEY);
-        int androidVersion = data.getIntExtra(AddPhoneActivity.ANDROID_VERSION_KEY, 0);
-        String website = data.getStringExtra(AddPhoneActivity.WEBSITE_KEY);
-
-        if (manufacturer == null || model == null || androidVersion == 0 || website == null) {
-            return null;
-        }
-        return new Phone(manufacturer, model, androidVersion, website);
+                    @Override
+                    public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                        Phone phone = phoneAdapter.getPhoneAt(viewHolder.getBindingAdapterPosition());
+                        phoneViewModel.delete(phone);
+                    }
+                });
+        itemTouchHelper.attachToRecyclerView(binding.recyclerPhones);
     }
 }

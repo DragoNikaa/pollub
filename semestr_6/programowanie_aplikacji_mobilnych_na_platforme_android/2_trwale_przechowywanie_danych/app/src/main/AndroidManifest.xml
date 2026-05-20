@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._2_trwale_przechowywanie_danych">
         <activity
-            android:name=".AddPhoneActivity"
+            android:name=".AddEditPhoneActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

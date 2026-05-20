@@ -2,7 +2,8 @@
     <string name="app_name">2_trwale_przechowywanie_danych</string>
 
     <string name="main_toolbar_title">Phone DB</string>
-    <string name="add_phone_toolbar_title">Add a new phone</string>
+    <string name="add_phone_toolbar_title">Add new phone</string>
+    <string name="edit_phone_toolbar_title">Edit phone</string>
 
     <string name="clear_menu_option">Clear all data</string>
     <string name="clear_toast">Clearing the data…</string>
@@ -23,7 +24,7 @@
     <string name="android_version_label">Android version</string>
     <string name="android_version_hint">Enter Android version</string>
     <string name="android_version_error_required">Android version is required</string>
-    <string name="android_version_error_invalid">Android version must be an integer</string>
+    <string name="android_version_error_invalid">Android version must be a positive integer</string>
 
     <string name="website_label">Website</string>
     <string name="website_hint">Enter website address</string>

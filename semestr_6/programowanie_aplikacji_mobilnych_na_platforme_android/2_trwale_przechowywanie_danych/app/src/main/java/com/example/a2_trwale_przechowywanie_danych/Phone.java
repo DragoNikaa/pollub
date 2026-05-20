@@ -2,6 +2,7 @@ package com.example.a2_trwale_przechowywanie_danych;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity
@@ -20,12 +21,19 @@ public class Phone {
     @NonNull
     private String website;
 
-    public Phone(@NonNull String manufacturer, @NonNull String model,
-                 int androidVersion, @NonNull String website) {
+    public Phone(@NonNull String manufacturer, @NonNull String model, int androidVersion,
+                 @NonNull String website) {
         this.manufacturer = manufacturer;
         this.model = model;
         this.androidVersion = androidVersion;
         this.website = website;
+    }
+
+    @Ignore
+    public Phone(long id, @NonNull String manufacturer, @NonNull String model, int androidVersion,
+                 @NonNull String website) {
+        this(manufacturer, model, androidVersion, website);
+        this.id = id;
     }
 
     public long getId() {

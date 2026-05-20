@@ -37,18 +37,22 @@ public abstract class PhoneRoomDatabase extends RoomDatabase {
 
     private static RoomDatabase.Callback roomDatabaseCallback = new RoomDatabase.Callback() {
         @Override
-        public void onCreate(@NonNull SupportSQLiteDatabase db) {
-            super.onCreate(db);
+        public void onOpen(@NonNull SupportSQLiteDatabase db) {
+            super.onOpen(db);
             databaseWriteExecutor.execute(() -> {
                 PhoneDao dao = INSTANCE.phoneDao();
-                Phone[] phones = {
-                        new Phone("Google", "Pixel 9", 14, "https://store.google.com/pl/product/pixel_9"),
-                        new Phone("Google", "Pixel 9 Pro", 14, "https://store.google.com/pl/product/pixel_9_pro"),
-                        new Phone("Google", "Pixel 9a", 15, "https://store.google.com/pl/product/pixel_9a"),
-                        new Phone("Google", "Pixel 10", 16, "https://store.google.com/pl/product/pixel_10"),
-                };
-                for (Phone phone : phones) dao.insert(phone);
+                if (dao.getCount() == 0) insertSamplePhones(dao);
             });
+        }
+
+        private void insertSamplePhones(PhoneDao dao) {
+            Phone[] phones = {
+                    new Phone("Google", "Pixel 9", 14, "https://store.google.com/pl/product/pixel_9"),
+                    new Phone("Google", "Pixel 9 Pro", 14, "https://store.google.com/pl/product/pixel_9_pro"),
+                    new Phone("Google", "Pixel 9a", 15, "https://store.google.com/pl/product/pixel_9a"),
+                    new Phone("Google", "Pixel 10", 16, "https://store.google.com/pl/product/pixel_10"),
+            };
+            for (Phone phone : phones) dao.insert(phone);
         }
     };
 }
