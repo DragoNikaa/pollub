@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">2_trwale_przechowywanie_danych</string>
+
+    <string name="main_toolbar_title">Phone DB</string>
+    <string name="add_phone_toolbar_title">Add new phone</string>
+    <string name="edit_phone_toolbar_title">Edit phone</string>
+
+    <string name="clear_menu_option">Clear all data</string>
+    <string name="clear_toast">Clearing the data…</string>
+
+    <string name="manufacturer_placeholder">Manufacturer placeholder</string>
+    <string name="model_placeholder">Model placeholder</string>
+
+    <string name="add_phone_fab_description">Add a new phone</string>
+
+    <string name="manufacturer_label">Manufacturer</string>
+    <string name="manufacturer_hint">Enter manufacturer</string>
+    <string name="manufacturer_error_required">Manufacturer is required</string>
+
+    <string name="model_label">Model</string>
+    <string name="model_hint">Enter model</string>
+    <string name="model_error_required">Model is required</string>
+
+    <string name="android_version_label">Android version</string>
+    <string name="android_version_hint">Enter Android version</string>
+    <string name="android_version_error_required">Android version is required</string>
+    <string name="android_version_error_invalid">Android version must be a positive integer</string>
+
+    <string name="website_label">Website</string>
+    <string name="website_hint">Enter website address</string>
+    <string name="website_error_required">Website address is required</string>
+    <string name="website_error_invalid">Please enter a valid website address</string>
+
+    <string name="website_button">Website</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="save_button">Save</string>
+</resources>
