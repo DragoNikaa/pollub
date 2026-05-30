@@ -1,6 +1,6 @@
 import {fetchApi} from "../api";
 
-export async function createResults(resultsData) {
+export async function store(resultsData) {
     return fetchApi("/api/results", {
         method: "POST", headers: {
             "Content-Type": "application/json",

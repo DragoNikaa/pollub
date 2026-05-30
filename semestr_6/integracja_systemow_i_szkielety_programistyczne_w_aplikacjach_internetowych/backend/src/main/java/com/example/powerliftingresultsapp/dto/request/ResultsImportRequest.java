@@ -11,13 +11,13 @@ public record ResultsImportRequest(
         @NotNull
         URL url,
 
+        @NotNull
         @Min(2023)
-        int year,
+        Integer year,
 
         @NotNull
         CompetitionLevel competitionLevel,
 
-        @NotNull
         Sex sex
 ) {
 }
