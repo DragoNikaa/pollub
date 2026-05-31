@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {getFilters, index} from "../services/resultsApi.js";
+import ResultsChart from "../components/ResultsChart.jsx";
 
 function ResultsPage() {
 
@@ -9,7 +10,8 @@ function ResultsPage() {
     const [weightCategories, setWeightCategories] = useState([]);
     const [universityTypes, setUniversityTypes] = useState([]);
 
-    const [summaryResults, setSummaryResults] = useState([]);
+    const [nationalResults, setNationalResults] = useState([]);
+    const [regionalResults, setRegionalResults] = useState([]);
 
     const [error, setError] = useState(null);
 
@@ -35,6 +37,16 @@ function ResultsPage() {
         setter(previous => checked ? [...previous, value] : previous.filter(item => item !== value));
     };
 
+    const weightCategoriesComparator = (a, b) => {
+        const aNumber = parseInt(a);
+        const bNumber = parseInt(b);
+
+        if (aNumber !== bNumber) {
+            return aNumber - bNumber;
+        }
+        return a.localeCompare(b);
+    };
+
     const handleSubmit = async event => {
         event.preventDefault();
 
@@ -47,13 +59,16 @@ function ResultsPage() {
         };
 
         try {
-            const response = await index({competitionLevel: "NATIONAL", ...request});
+            const nationalResults = await index({competitionLevel: "NATIONAL", ...request});
+            const regionalResults = await index({competitionLevel: "REGIONAL", ...request});
 
-            setSummaryResults(response);
+            setNationalResults(nationalResults);
+            setRegionalResults(regionalResults);
             setError(null);
         } catch (err) {
             setError(err.message);
-            setSummaryResults([]);
+            setNationalResults(null);
+            setRegionalResults(null);
         }
     };
 
@@ -75,7 +90,7 @@ function ResultsPage() {
                 </fieldset>
                 <fieldset>
                     <legend>Weight Categories</legend>
-                    {filters.weightCategories.map(category => (
+                    {filters.weightCategories.sort(weightCategoriesComparator).map(category => (
                         <label key={category}>
                             <input type="checkbox" value={category}
                                    onChange={e => updateArray(setWeightCategories, category, e.target.checked)}
@@ -86,7 +101,7 @@ function ResultsPage() {
                 </fieldset>
                 <fieldset>
                     <legend>University Types</legend>
-                    {filters.universityTypes.map(type => (
+                    {filters.universityTypes.sort().map(type => (
                         <label key={type}>
                             <input type="checkbox" value={type}
                                    onChange={e => updateArray(setUniversityTypes, type, e.target.checked)}
@@ -99,13 +114,8 @@ function ResultsPage() {
                 </button>
             </form>
 
-            {summaryResults.length > 0 && (
-                <div>
-                    <h3>Summary Results:</h3>
-                    <pre>
-                        {JSON.stringify(summaryResults, null, 2)}
-                    </pre>
-                </div>
+            {nationalResults && regionalResults && (
+                <ResultsChart nationalResults={nationalResults} regionalResults={regionalResults}/>
             )}
 
             {error && (

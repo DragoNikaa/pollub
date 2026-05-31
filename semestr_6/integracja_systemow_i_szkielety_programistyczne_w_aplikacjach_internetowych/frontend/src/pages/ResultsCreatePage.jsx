@@ -17,7 +17,7 @@ function ResultsCreatePage() {
         event.preventDefault();
 
         try {
-            const resultsData = {url, year, competitionLevel, sex};
+            const resultsData = {url, year, competitionLevel, sex: competitionLevel === "NATIONAL" ? sex : null};
             const storedResultsStats = await store(resultsData);
 
             setResponse(storedResultsStats);
