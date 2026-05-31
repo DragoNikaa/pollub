@@ -8,3 +8,17 @@ export async function fetchApi(path, options = {}) {
     }
     return response.json();
 }
+
+export function buildQueryString(paramsObject) {
+    const params = new URLSearchParams();
+
+    Object.entries(paramsObject).forEach(([key, value]) => {
+        if (Array.isArray(value)) {
+            value.forEach(item => params.append(key, item));
+        } else {
+            params.append(key, value);
+        }
+    });
+
+    return params.toString();
+}

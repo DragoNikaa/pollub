@@ -2,23 +2,23 @@ package com.example.powerliftingresultsapp.dto.request;
 
 import com.example.powerliftingresultsapp.model.enums.CompetitionLevel;
 import com.example.powerliftingresultsapp.model.enums.Sex;
-import jakarta.validation.constraints.Min;
+import com.example.powerliftingresultsapp.model.enums.UniversityType;
 import jakarta.validation.constraints.NotNull;
 
-import java.net.URL;
+import java.util.Set;
 
-public record ResultsImportRequest(
-
-        @NotNull
-        URL url,
-
-        @NotNull
-        @Min(2023)
-        Integer year,
+public record SummaryResultRequest(
 
         @NotNull
         CompetitionLevel competitionLevel,
 
-        Sex sex
+        @NotNull
+        Set<Sex> sexes,
+
+        @NotNull
+        Set<String> weightCategories,
+
+        @NotNull
+        Set<UniversityType> universityTypes
 ) {
 }
