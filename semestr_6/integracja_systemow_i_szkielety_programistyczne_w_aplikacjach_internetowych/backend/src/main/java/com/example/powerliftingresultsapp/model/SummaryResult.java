@@ -29,10 +29,10 @@ public class SummaryResult {
 
     private int numberOfAthletes;
 
-    private double avgSquat;
-    private double avgBenchPress;
-    private double avgDeadlift;
+    private double squatSum;
+    private double benchPressSum;
+    private double deadliftSum;
 
-    private double avgTotal;
-    private double avgIpfPoints;
+    private double totalSum;
+    private double ipfPointsSum;
 }
