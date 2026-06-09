@@ -228,7 +228,7 @@ Weryfikacja komunikacji między przykładowymi kontenerami w sieci przy użyciu 
 ```bash
 docker exec web1 curl web2
 ```
-```
+```html
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100   255  100   255    0     0   108k      0 --:--:-- --:--:-- --:--:--  124k
