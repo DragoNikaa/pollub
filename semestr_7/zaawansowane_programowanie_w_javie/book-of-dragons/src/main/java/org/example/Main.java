@@ -3,9 +3,14 @@ package org.example;
 import org.example.files.DragonFilesIO;
 import org.example.files.DragonFilesNIO;
 import org.example.streams.DragonStreams;
+import org.example.xml.DragonXmlService;
 
 public class Main {
     static void main() {
+        xml();
+    }
+
+    private static void streamsAndFiles() {
         System.out.println("----- STREAMS -----");
         DragonStreams.main();
 
@@ -14,5 +19,9 @@ public class Main {
 
         System.out.println("\n----- FILES: NIO -----");
         DragonFilesNIO.main();
+    }
+
+    private static void xml() {
+        DragonXmlService.main();
     }
 }
