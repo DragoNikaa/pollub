@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.List;
 
 public class DragonXmlService {
-    private static final String FILEPATH = "output/dragons.xml";
+    private static final String FILE_PATH = "output/dragons.xml";
 
     private static final Dragons DRAGONS = new Dragons(List.of(
             new Dragon("Toothless", "Night Fury", true, 95, new Speed(150), Rarity.LEGENDARY),
@@ -35,9 +35,9 @@ public class DragonXmlService {
     private static void serializeDragons() {
         try {
             Marshaller marshaller = createValidatedMarshaller();
-            marshaller.marshal(DRAGONS, new File(FILEPATH));
+            marshaller.marshal(DRAGONS, new File(FILE_PATH));
 
-            System.out.println("Dragons were successfully serialized to the file '" + FILEPATH + "'.");
+            System.out.println("Dragons were successfully serialized to the file '" + FILE_PATH + "'.");
         } catch (JAXBException | SAXException e) {
             System.err.println("Could not serialize dragons: " + e.getCause().getMessage());
         }
@@ -46,9 +46,9 @@ public class DragonXmlService {
     private static void deserializeDragons() {
         try {
             Unmarshaller unmarshaller = createValidatedUnmarshaller();
-            Dragons dragons = (Dragons) unmarshaller.unmarshal(new File(FILEPATH));
+            Dragons dragons = (Dragons) unmarshaller.unmarshal(new File(FILE_PATH));
 
-            System.out.println("Deserialized dragons from the file '" + FILEPATH + "':");
+            System.out.println("Deserialized dragons from the file '" + FILE_PATH + "':");
             for (Dragon dragon : dragons.getList()) {
                 System.out.println("- " + dragon);
             }

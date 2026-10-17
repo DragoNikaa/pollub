@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class DragonStreams {
+public class DragonStreamService {
     public static void main() {
         findFurySpecies();
         System.out.println();
@@ -60,7 +60,7 @@ public class DragonStreams {
                 "mEATluG ",
                 " bArF   & belCH  "
         );
-        Stream<String> normalizedNames = rawNames.map(DragonStreams::normalizeName);
+        Stream<String> normalizedNames = rawNames.map(DragonStreamService::normalizeName);
 
         System.out.println("Normalized dragon names:");
         normalizedNames.forEach(name -> System.out.println("- " + name));
