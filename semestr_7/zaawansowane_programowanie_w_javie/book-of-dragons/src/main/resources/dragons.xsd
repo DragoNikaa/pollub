@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="dragons">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dragon"
+                            type="dragon"
+                            minOccurs="0"
+                            maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="dragon">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="species" type="xs:string"/>
+            <xs:element name="isFlying" type="xs:boolean"/>
+            <xs:element name="firePower">
+                <xs:simpleType>
+                    <xs:restriction base="xs:double">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="100"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="maxSpeed">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="speed">
+                            <xs:attribute name="unit" type="xs:string" use="required"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="rarity" type="rarity"/>
+        </xs:sequence>
+
+        <xs:attribute name="id" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="speed">
+        <xs:restriction base="xs:double">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rarity">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="COMMON"/>
+            <xs:enumeration value="UNCOMMON"/>
+            <xs:enumeration value="RARE"/>
+            <xs:enumeration value="EPIC"/>
+            <xs:enumeration value="LEGENDARY"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

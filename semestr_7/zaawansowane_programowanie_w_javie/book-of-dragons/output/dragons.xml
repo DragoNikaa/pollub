@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dragons>
+    <dragon id="1">
+        <name>Toothless</name>
+        <species>Night Fury</species>
+        <isFlying>true</isFlying>
+        <firePower>95.0</firePower>
+        <maxSpeed unit="km/h">150.0</maxSpeed>
+        <rarity>LEGENDARY</rarity>
+    </dragon>
+    <dragon id="2">
+        <name>Stormfly</name>
+        <species>Deadly Nadder</species>
+        <isFlying>true</isFlying>
+        <firePower>80.0</firePower>
+        <maxSpeed unit="mph">70.0</maxSpeed>
+        <rarity>UNCOMMON</rarity>
+    </dragon>
+    <dragon id="3">
+        <name>Speedy</name>
+        <species>Speed Stinger</species>
+        <isFlying>false</isFlying>
+        <firePower>0.0</firePower>
+        <maxSpeed unit="km/h">105.0</maxSpeed>
+        <rarity>RARE</rarity>
+    </dragon>
+</dragons>
