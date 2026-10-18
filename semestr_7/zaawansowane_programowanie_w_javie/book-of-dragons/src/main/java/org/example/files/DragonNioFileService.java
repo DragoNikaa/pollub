@@ -37,9 +37,7 @@ public class DragonNioFileService {
     private static void readSpecies() {
         try {
             String species = Files.readString(Path.of(FILE_PATH));
-
-            System.out.println("Contents of the file '" + FILE_PATH + "':");
-            System.out.println(species);
+            System.out.println("Contents of the file '" + FILE_PATH + "':\n" + species);
         } catch (IOException e) {
             System.err.println("Could not read species: " + e.getMessage());
         }
