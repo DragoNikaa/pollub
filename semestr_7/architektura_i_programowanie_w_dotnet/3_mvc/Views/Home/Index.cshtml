@@ -1,0 +1,9 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>@DateTime.Now.ToString("dddd, dd MMMM yyyy")</p>
+    <p class="@((double)(ViewData["random"] ?? 0) > 0.5 ? "highlighted" : null)">@ViewData["random"]</p>
+</div>

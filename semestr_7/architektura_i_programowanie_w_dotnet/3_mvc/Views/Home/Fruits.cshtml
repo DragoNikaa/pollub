@@ -1,0 +1,52 @@
+@model IEnumerable<Fruit>
+
+@{
+    ViewData["Title"] = "Fruits";
+}
+
+<h1>Fruits</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            <a asp-action="Fruits" asp-route-sort="@FruitSortKey.Name">
+                @Html.DisplayNameFor(model => model.Name)
+            </a>
+        </th>
+        <th>
+            <a asp-action="Fruits" asp-route-sort="@FruitSortKey.IsSweet">
+                @Html.DisplayNameFor(model => model.IsSweet)
+            </a>
+        </th>
+        <th>
+            <a asp-action="Fruits" asp-route-sort="@FruitSortKey.Price">
+                @Html.DisplayNameFor(model => model.Price)
+            </a>
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSweet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
