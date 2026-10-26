@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:8.4
+    container_name: book-of-dragons-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: book_of_dragons_db
+      MYSQL_USER: app
+      MYSQL_PASSWORD: app_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - data:/var/lib/mysql
+
+volumes:
+  data:
