@@ -9,11 +9,16 @@ import org.example.streams.DragonStreamService;
 import org.example.xml.DragonXmlService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication(scanBasePackages = "org.example.spring")
+@SpringBootApplication(scanBasePackages = {
+//        "org.example.spring",
+        "org.example.hibernate"
+})
+//@EnableJpaRepositories(basePackages = "org.example.spring")
 public class Main {
     static void main() {
-        spring();
+        hibernate();
     }
 
     private static void streamsAndFiles() {
@@ -44,5 +49,9 @@ public class Main {
 
     private static void spring() {
         SpringApplication.run(Main.class);
+    }
+
+    private static void hibernate() {
+        spring();
     }
 }
