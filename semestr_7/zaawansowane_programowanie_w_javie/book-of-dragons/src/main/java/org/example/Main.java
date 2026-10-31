@@ -14,12 +14,13 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = {
 //        "org.example.spring",
-        "org.example.hibernate"
+        "org.example.hibernate",
+        "org.example.security"
 })
 //@EnableJpaRepositories(basePackages = "org.example.spring")
 public class Main {
     static void main() {
-        jsoup();
+        security();
     }
 
     private static void streamsAndFiles() {
@@ -59,5 +60,9 @@ public class Main {
     private static void jsoup() {
         System.out.println("----- STAFF -----");
         PollubStaffService.main();
+    }
+
+    private static void security() {
+        spring();
     }
 }

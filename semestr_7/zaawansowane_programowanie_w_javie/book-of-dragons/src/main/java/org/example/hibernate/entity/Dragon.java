@@ -32,7 +32,7 @@ public class Dragon {
     private LocalDate birthDate;
 
     @ColumnDefault("true")
-    private Boolean flying;
+    private Boolean flying = true;
 
     @ManyToOne
     @OnDelete(action = OnDeleteAction.SET_NULL)
