@@ -1,0 +1,10 @@
+﻿@page
+@model _4_razor_pages.Pages.UploadModel
+
+<form asp-page="Upload" enctype="multipart/form-data" method="post">
+    <input class="form-control" asp-for="Upload" type="file"
+           accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*"/>
+    <div asp-validation-summary="All" class="text-danger" markdown="1"></div>
+
+    <input class="form-control" type="submit" value="Upload"/>
+</form>
