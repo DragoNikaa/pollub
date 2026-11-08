@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.files.DragonIoFileService;
 import org.example.files.DragonNioFileService;
+import org.example.jsoup.PollubStaffService;
 import org.example.lombok.service.DragonBuilderService;
 import org.example.lombok.service.DragonDtoService;
 import org.example.lombok.service.DragonEntityService;
@@ -13,12 +14,13 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = {
 //        "org.example.spring",
-        "org.example.hibernate"
+        "org.example.hibernate",
+        "org.example.security"
 })
 //@EnableJpaRepositories(basePackages = "org.example.spring")
 public class Main {
     static void main() {
-        hibernate();
+        security();
     }
 
     private static void streamsAndFiles() {
@@ -52,6 +54,15 @@ public class Main {
     }
 
     private static void hibernate() {
+        spring();
+    }
+
+    private static void jsoup() {
+        System.out.println("----- STAFF -----");
+        PollubStaffService.main();
+    }
+
+    private static void security() {
         spring();
     }
 }
